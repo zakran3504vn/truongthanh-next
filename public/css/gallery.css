@@ -1,0 +1,421 @@
+/* TechCode Multipurpose Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	Gallery One
+====================================================================
+
+***/
+
+.gallery-one{
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery-one .swiper-container{
+	margin-top: -120px;
+	padding-top: var(--padding-top-120);
+}
+
+.gallery-one .swiper-button-prev{
+	position: absolute;
+	right: 80px;
+	top: 0px;
+	left: auto;
+	width: 67px;
+	height: 67px;
+	margin: 0px;
+	border-radius: 50px;
+	line-height: 67px;
+	text-align: center;
+	display: inline-block;
+	color: var(--main-color);
+	font-size: var(--font-18);
+	transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+	background-color: rgba(var(--main-color-rgb), 0.10);
+}
+
+.gallery-one .swiper-button-prev:hover{
+	color: var(--white-color);
+	background-color: rgba(var(--main-color-rgb), 1);
+}
+
+.gallery-one .swiper-button-next:hover{
+	color: var(--white-color);
+	background-color: rgba(var(--main-color-rgb), 1);
+}
+
+.gallery-one .swiper-button-next::after,
+.gallery-one .swiper-button-prev::after{
+	display: none;
+}
+
+.gallery-one .swiper-button-next{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 67px;
+	height: 67px;
+	margin: 0px;
+	border-radius: 50px;
+	line-height: 67px;
+	text-align: center;
+	display: inline-block;
+	color: var(--main-color);
+	font-size: var(--font-18);
+	transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+	background-color: rgba(var(--main-color-rgb), 0.10);
+}
+
+.gallery-block_one{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.gallery-block_one-inner{
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.gallery-block_one-image{
+	position: relative;
+}
+
+.gallery-block_one-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.gallery-block_one-inner:hover .gallery-block_one-image img{
+	opacity: 0.70;
+	transform: scale(1.07,1.07) rotate(2deg);
+}
+
+.gallery-block_one-overlay{
+	position: absolute;
+	left: 15px;
+	bottom: -100px;
+	right: 15px;
+	min-height: 84px;
+	padding: 12px 12px;
+	border-radius: 5px;
+	background-color: var(--white-color);
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.gallery-block_one-inner:hover .gallery-block_one-overlay{
+	bottom: 15px;
+}
+
+.gallery-block_one-content{
+	position: relative;
+	padding-top: var(--padding-top-15);
+	padding-left: var(--padding-left-75);
+}
+
+.gallery-block_one-plus{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 60px;
+	height: 60px;
+	font-weight: 600;
+	line-height: 60px;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+	color: var(--white-color);
+	font-size: var(--font-20);
+	background-color: var(--main-color);
+}
+
+.gallery-block_one-plus:hover{
+	background-color: var(--headings-color);
+}
+
+.gallery-block_one-heading{
+	position: relative;
+	font-weight: 600;
+	font-size: var(--font-16);
+}
+
+.gallery-block_one-link{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 1;
+	display: block;
+}
+
+/*** 
+
+====================================================================
+	Gallery Two
+====================================================================
+
+***/
+
+.gallery-two{
+	position: relative;
+	padding: 100px 0px 70px;
+}
+
+.gallery-block_two{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.gallery-block_two-inner{
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.gallery-block_two-image{
+	position: relative;
+}
+
+.gallery-block_two-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.gallery-block_two-inner:hover .gallery-block_two-image img{
+	opacity: 0.70;
+	transform: scale(1.07,1.07) rotate(2deg);
+}
+
+.gallery-block_two-overlay{
+	position: absolute;
+	left: 0px;
+	bottom: -60px;
+	right: 0px;
+	opacity: 0;
+	text-align: center;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+	transform: scale(1,0.2);
+}
+
+.gallery-block_two-inner:hover .gallery-block_two-overlay{
+	opacity: 1;
+	bottom: 30px;
+	transform: scale(1,1);
+}
+
+.gallery-block_two-content{
+	position: relative;
+	padding: 25px 60px;
+	border-radius: 8px;
+	text-align: center;
+	display: inline-block;
+	background-color: var(--white-color);
+}
+
+.gallery-block_two-heading{
+	
+}
+
+.gallery-block_two-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+/*** 
+
+====================================================================
+	Gallery Three
+====================================================================
+
+***/
+
+.gallery-three{
+	position: relative;
+	padding: 0px 0px 70px;
+}
+
+.gallery-three .outer-container{
+	position: relative;
+	margin: 0 auto;
+	padding: 0px 15px;
+	max-width: 1730px;
+}
+
+.gallery-block_three{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.gallery-block_three-inner{
+	position: relative;
+}
+
+.gallery-block_three-image{
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+	background-color: var(--main-color);
+}
+
+.gallery-block_three-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.gallery-block_three-inner:hover .gallery-block_three-image img{
+	opacity: 0.70;
+	transform: scale(1.07,1.07) rotate(2deg);
+}
+
+.gallery-block_three-content{
+	position: relative;
+	border-radius: 5px;
+	margin-top: -40px;
+	top: -5px;
+	display: inline-block;
+	padding: 25px 60px 25px 40px;
+	background-color: var(--color-six);
+	border-left: 3px solid var(--main-color);
+}
+
+.gallery-block_three-heading{
+	position: relative;
+	padding-right: var(--padding-right-35);
+}
+
+.gallery-block_three-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.gallery-block_three-heading a:hover{
+	color: var(--main-color);
+}
+
+.gallery-block_three-heading::before{
+	position: absolute;
+	content: '\f101';
+	right: 0px;
+	top: 1px;
+	font-family: "Font Awesome 6 Pro";
+}
+
+/*** 
+
+====================================================================
+	Gallery Four
+====================================================================
+
+***/
+
+.gallery-four{
+	position: relative;
+	margin-top: -130px;
+	padding: 255px 0px 80px;
+}
+
+.gallery-four_bg-layer{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: var(--color-six);
+}
+
+.gallery-block_four{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.gallery-block_four-inner{
+	position: relative;
+}
+
+.gallery-block_four-image{
+	position: relative;
+	overflow: auto;
+	border-radius: 5px;
+}
+
+.gallery-block_four-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+.gallery-block_four-overlay{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: rgba(var(--color-two-rgb), 0.50);
+	transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease,-webkit-transform 0.4s ease;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+}
+
+.gallery-block_four-overlay .plus_icon{
+	position: relative;
+	color: var(--white-color);
+	font-size: var(--font-40);
+}
+
+.gallery-block_four-inner:hover .gallery-block_four-overlay{
+	-webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+}
+

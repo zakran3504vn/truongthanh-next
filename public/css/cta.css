@@ -1,0 +1,1176 @@
+/* TechCode Multipurpose Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	CTA One
+====================================================================
+
+***/
+
+.cta-one{
+	position: relative;
+	padding: 120px 0px 120px;
+	background-color: var(--main-color);
+}
+
+.cta-one_icon{
+	position: absolute;
+	left: 24%;
+	bottom: 30%;
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+}
+
+.cta-one_icon-two{
+	position: absolute;
+	right: 20%;
+	bottom: 28%;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+}
+
+.subscribe-box {
+    position: relative;
+	width:555px;
+	margin: 0 auto;
+}
+
+.subscribe-box .form-group {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+	padding-right: 180px;
+}
+
+.subscribe-box .form-group input[type="text"],
+.subscribe-box .form-group input[type="email"] {
+    position: relative;
+    line-height: 43px;
+    display: block;
+    height: 64px;
+    width: 100%;
+	border-radius: 8px;
+    box-shadow: inherit;
+    font-size: var(--font-16);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    padding: 10px 15px 10px 25px;
+    color:var(--headings-color);
+    background-color:var(--white-color);
+}
+
+.subscribe-box .form-group button {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-weight: 600;
+    padding: 21px 32px;
+	border-radius: 5px;
+	color: var(--headings-color);
+    display: inline-block;
+    font-size: var(--font-17);
+    text-transform: capitalize;
+    background-color: var(--color-three);
+}
+
+/*** 
+
+====================================================================
+	CTA Two
+====================================================================
+
+***/
+
+.cta-two{
+	position: relative;
+	z-index: 10;
+}
+
+.cta-two .inner-container{
+	position: relative;
+	padding: 56px 70px;
+	border-radius: 10px;
+	background-color: var(--color-three);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.cta-two_title{
+	position: relative;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-24);
+}
+
+.cta-two_heading{
+	position: relative;
+	color: var(--headings-color);
+	margin-top: var(--margin-top-15);
+}
+
+.cta-two_meta{
+	position: relative;
+}
+
+.cta-two_meta li{
+	position: relative;
+	display: block;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-18);
+	padding-left: var(--padding-left-30);
+	margin-bottom: var(--margin-bottom-20);
+}
+
+.cta-two_meta li a{
+	position: relative;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-18);
+}
+
+.cta-two_meta li .icon{
+	position: absolute;
+	left: 0px;
+	font-weight: 700;
+	color: var(--headings-color);
+}
+
+.cta-two_meta li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+/*** 
+
+====================================================================
+	CTA Three
+====================================================================
+
+***/
+
+.cta-three{
+	position: relative;
+	padding: 35px 0px 50px;
+	background-color: var(--color-three);
+}
+
+.cta-three .inner-container{
+	position: relative;
+}
+
+.cta-three_title-column{
+	position: relative;
+}
+
+.cta-three_title-inner{
+	position: relative;
+	padding-left: 300px;
+}
+
+.cta-three_title-image{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.cta-three_heading{
+	position: relative;
+	padding-top: var(--padding-top-50);
+}
+
+.cta-three_form-column{
+	position: relative;
+}
+
+.cta-three_form-inner{
+	position: relative;
+	padding: 100px 0px 50px;
+}
+
+/*** 
+
+====================================================================
+	CTA Four
+====================================================================
+
+***/
+
+.cta-four{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-nine);
+}
+
+.cta-four_title-column{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.cta-four_heading{
+	font-weight: 500;
+	color: var(--white-color);
+}
+
+.cta-four_pattern{
+	position: absolute;
+	left: -30px;
+	bottom: -40px;
+	width: 95px;
+	height: 37px;
+	background-repeat: no-repeat;
+}
+
+/*** 
+
+====================================================================
+	CTA Five
+====================================================================
+
+***/
+
+.cta-five{
+	position: relative;
+	z-index: 10;
+}
+
+.cta-five_pattern{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 207px;
+	height: 181px;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.cta-five_color-one{
+	position: absolute;
+	left: -100px;
+	top: -100px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: var(--main-color);
+}
+
+.cta-five_color-two{
+	position: absolute;
+	right: -100px;
+	bottom: -100px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: var(--main-color);
+}
+
+.cta-five_inner-container{
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	padding: 90px 70px 90px;
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+}
+
+.cta-five_heading{
+	position: relative;
+	line-height: 45px;
+	font-size: var(--font-32);
+}
+
+/* Subscribe Box */
+
+.subscribe-box_two{
+    position: relative;
+	width:555px;
+	z-index: 2;
+}
+
+.subscribe-box_two .icon{
+    position: absolute;
+	left: 22px;
+	top: 18px;
+	z-index: 1;
+	font-weight: 600;
+	color: var(--headings-color);
+	font-size: var(--font-18);
+}
+
+.subscribe-box_two .form-group {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+	padding-right: 205px;
+}
+
+.subscribe-box_two .form-group input[type="text"],
+.subscribe-box_two .form-group input[type="email"] {
+    position: relative;
+    line-height: 43px;
+    display: block;
+    height: 64px;
+    width: 100%;
+	border-radius: 5px;
+    box-shadow: inherit;
+    font-size: var(--font-16);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    padding: 10px 15px 10px 55px;
+    color:var(--headings-color);
+    background-color:var(--white-color);
+	border:1px solid rgba(var(--black-color-rgb), 0.10);
+}
+
+.subscribe-box_two .form-group button {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-weight: 600;
+    padding: 21px 32px;
+	border-radius: 5px;
+    display: inline-block;
+    font-size: var(--font-17);
+	color: var(--white-color);
+    text-transform: capitalize;
+    background-color: var(--main-color);
+}
+
+/*** 
+
+====================================================================
+	CTA Six
+====================================================================
+
+***/
+
+.cta-six{
+	position: relative;
+	text-align: center;
+	padding: 120px 0px 120px;
+	background-position: center bottom;
+	background-color: var(--color-eleven);
+}
+
+.cta-six_title{
+	position: relative;
+	font-weight: 600;
+	color: var(--headings-color);
+	font-size: var(--font-50);
+}
+
+.cta-six_text{
+	position: relative;
+	margin-top: var(--margin-top-20);
+}
+
+.cta-six-buttons{
+	position: relative;
+	margin-top: var(--margin-top-50);
+}
+
+.cta-six-buttons .theme-btn{
+	position: relative;
+	border-radius: 50px;
+	margin: 0px 10px;
+	text-transform: capitalize;
+}
+
+/*** 
+
+====================================================================
+	CTA Seven
+====================================================================
+
+***/
+
+.cta-seven{
+	position: relative;
+}
+
+.cta-seven.margin-top{
+	margin-top: -110px;
+}
+
+.cta-six_pattern{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 212px;
+	height: 160px;
+	background-repeat: no-repeat;
+}
+
+.cta-six_pattern-two{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 212px;
+	height: 145px;
+	background-repeat: no-repeat;
+}
+
+.cta-seven_inner-container{
+	position: relative;
+	overflow: auto;
+	text-align: center;
+	border-radius: 10px;
+	padding: 50px 30px;
+	background-color: var(--color-three);
+}
+.cta-seven_phone{
+	position: relative;
+	font-weight: 500;
+	display: inline-block;
+	color: var(--headings-color);
+	font-size: var(--font-24);
+	margin-top: var(--margin-top-10);
+	padding-left: var(--padding-left-35);
+}
+
+.cta-seven_phone::before{
+	position: absolute;
+	content: '\f095';
+	left: 0px;
+	top: 0px;
+	font-weight: 800;
+	font-size: var(--font-20);
+	font-family: "Font Awesome 6 Pro";
+}
+
+/*** 
+
+====================================================================
+	CTA Eight
+====================================================================
+
+***/
+
+.cta-eight{
+	position: relative;
+	padding: 120px 0px 120px;
+	background-color: var(--main-color);
+}
+
+.cta-eight_text{
+	position: relative;
+	text-align: center;
+	line-height: 30px;
+	color: var(--white-color);
+	font-size: var(--font-18);
+	margin-top: var(--margin-top-35);
+}
+
+.cta-eight .subscribe-box{
+	width:100%;
+	max-width:600px;
+}
+
+.cta-eight .subscribe-box .form-group{
+	padding-right: 200px;
+}
+
+.cta-eight_icons{
+	position: absolute !important;
+	left:0px !important;
+	top: 0px !important;
+	right: 0px !important;
+	bottom: 0px !important;
+}
+
+.cta-eight_icons-one{
+	position: absolute;
+	left: 20% !important;
+	top: 20% !important;
+	width: 49px;
+	height: 49px;
+	background-repeat: no-repeat;
+}
+
+.cta-eight_icons-two{
+	position: absolute;
+	left: 18% !important;
+	bottom: 5% !important;
+	top: auto !important;
+	width: 150px;
+	height: 152px;
+	background-repeat: no-repeat;
+}
+
+.cta-eight_icons-three{
+	position: absolute;
+	left: auto !important;
+	right: 20% !important;
+	top: 20% !important;
+	width: 130px;
+	height: 130px;
+	background-repeat: no-repeat;
+}
+
+.cta-eight_icons-four{
+	position: absolute;
+	top: auto !important;
+	left: auto !important;
+	right: 18% !important;
+	bottom: 5% !important;
+	width: 92px;
+	height: 92px;
+	background-repeat: no-repeat;
+}
+
+/*** 
+
+====================================================================
+	CTA Nine
+====================================================================
+
+***/
+
+.cta-nine{
+	position: relative;
+	z-index: 1;
+}
+
+.cta-nine_inner-container{
+	position: relative;
+	padding: 65px 65px;
+	border-radius: 5px;
+	background-color: var(--main-color);
+}
+
+.cta-nine_title{
+	color: var(--white-color);
+	font-size: var(--font-32);
+}
+
+.cta-nine-text{
+	position: relative;
+	color: var(--white-color);
+	font-size: var(--font-20);
+	margin-top: var(--margin-top-15);
+}
+
+.cta-nine_buttons{
+	position: relative;
+}
+
+.cta-nine_buttons a{
+	position: relative;
+	display: inline-block;
+	margin-left: var(--margin-left-10);
+}
+
+/*** 
+
+====================================================================
+	CTA Ten
+====================================================================
+
+***/
+
+.cta-ten{
+	position: relative;
+	padding: 70px 0px 70px;
+	background-color: var(--color-three);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.cta-ten .inner-container{
+	position: relative;
+}
+
+.cta-ten_phone{
+	position: relative;
+	line-height: 34px;
+	font-weight: 600;
+	color: var(--headings-color);
+	font-size: var(--font-20);
+	padding-left: var(--padding-left-90);
+}
+
+.cta-ten_phone-icon{
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	width: 65px;
+	height: 65px;
+	font-weight: 600;
+	line-height: 65px;
+	border-radius: 5px;
+	text-align: center;
+	color: var(--headings-color);
+	font-size: var(--font-24);
+	background-color: var(--color-six);
+}
+
+.cta-ten_phone a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.cta-ten_button{
+	position: relative;
+}
+
+.cta-ten_button a{
+	position: relative;
+	border-radius: 5px;
+	padding: 20px 35px;
+	font-weight: 500;
+	color: var(--white-color);
+	font-size: var(--font-18);
+	background-color: var(--headings-color);
+}
+
+.cta-ten_button a i{
+	position: relative;
+	margin-right: var(--margin-right-5);
+}
+
+/* Style Two */
+
+.cta-ten.style-two{
+	background-color: var(--color-seven);
+}
+
+.cta-ten.style-two .cta-ten_phone,
+.cta-ten.style-two .cta-ten_phone a{
+	color: var(--white-color);
+}
+
+.cta-ten.style-two .cta-ten_phone-icon{
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+.cta-ten.style-two .cta-ten_button a{
+	padding: 18px 44px;
+	color: var(--headings-color);
+	text-transform: capitalize;
+	background-color: var(--color-three);
+}
+
+.cta-ten_icon-one{
+	position: absolute;
+	right: 12%;
+	top: 15%;
+	width: 110px;
+	height: 110px;
+	background-repeat: no-repeat;
+}
+
+.cta-ten_icon-two{
+	position: absolute;
+	left: 8%;
+	bottom: 10%;
+	width: 124px;
+	height: 116px;
+	background-repeat: no-repeat;
+}
+
+/*** 
+
+====================================================================
+	CTA Eleven
+====================================================================
+
+***/
+
+.cta-eleven{
+	position: relative;
+	z-index: 1;
+	padding-top: var(--padding-top-110);
+}
+
+.cta-eleven .inner-container{
+	position: relative;
+	border-radius: 10px;
+	padding: 70px 70px 70px;
+	background-color: var(--main-color);
+}
+
+.cta-eleven_social{
+	position: relative;
+}
+
+.cta-eleven_social span{
+	position: relative;
+	display: block;
+	color: var(--white-color);
+	font-size: var(--font-20);
+	margin-bottom: var(--margin-bottom-15);
+}
+
+.cta-eleven_social a{
+	position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    line-height: 38px;
+    text-align: center;
+    display: inline-block;
+    color: var(--headings-color);
+	font-size: var(--font-16);
+    margin-right: var(--margin-right-5);
+    background-color: var(--color-three);
+}
+
+.cta-eleven_title-box{
+	position: relative;
+}
+
+.cta-eleven_title{
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: var(--white-color);
+	text-transform: uppercase;
+	font-size: var(--font-13);
+}
+
+.cta-eleven_heading{
+	position: relative;
+	font-weight: 500;
+	max-width: 600px;
+	line-height: 42px;
+	color: var(--white-color);
+	font-size: var(--font-32);
+	margin-top: var(--margin-top-10);
+}
+
+/*** 
+
+====================================================================
+	CTA Two
+====================================================================
+
+***/
+
+.cta-twelve{
+	position: relative;
+	z-index: 10;
+	padding: 80px 0px;
+	background-color: var(--color-three);
+}
+
+.cta-twelve .inner-container{
+	position: relative;
+}
+
+.cta-twelve_title-column{
+	position: relative;
+}
+
+.cta-twelve_title-inner{
+	position: relative;
+}
+
+.cta-twelve_title{
+	position: relative;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-24);
+}
+
+.cta-twelve_heading{
+	position: relative;
+	padding-left: var(--padding-left-100);
+}
+
+.cta-twelve_title-icon{
+	position: absolute;
+	left: 0px;
+	line-height: 1em;
+	color: var(--headings-color);
+	font-family: "Flaticon";
+	font-size: var(--font-80);
+}
+
+/* Subscribe Box */
+
+.subscribe-box_three{
+    position: relative;
+	width:555px;
+	z-index: 2;
+}
+
+.subscribe-box_three .form-group {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.subscribe-box_three .form-group input[type="text"],
+.subscribe-box_three .form-group input[type="email"] {
+    position: relative;
+    line-height: 40px;
+    display: block;
+    height: 74px;
+    width: 100%;
+	background:none;
+	font-weight: 500;
+	border-radius: 5px;
+    box-shadow: inherit;
+    font-size: var(--font-18);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    padding: 10px 15px 10px 25px;
+    color:var(--headings-color);
+	border:1px solid rgba(var(--black-color-rgb), 1);
+}
+
+.subscribe-box_three .form-group button {
+    position: absolute;
+    right: 6px;
+    bottom: 5px;
+    font-weight: 500;
+    padding: 20px 32px;
+	border-radius: 5px;
+    display: inline-block;
+    font-size: var(--font-18);
+	color: var(--white-color);
+    text-transform: capitalize;
+    background-color: var(--headings-color);
+}
+
+/*** 
+
+====================================================================
+	CTA Thirteen
+====================================================================
+
+***/
+
+.cta-thirteen{
+	position: relative;
+	z-index: 2;
+}
+
+.cta-thirteen_pattern-one{
+	position: absolute;
+	left: 60px;
+	bottom: 50px;
+	width: 115px;
+	height: 74px;
+	background-repeat: no-repeat;
+}
+
+.cta-thirteen_pattern-two{
+	position: absolute;
+	right: 60px;
+	bottom: 50px;
+	width: 130px;
+	height: 130px;
+	background-repeat: no-repeat;
+}
+
+.cta-thirteen .inner-container{
+	position: relative;
+	padding: 52px 30px;
+	text-align: center;
+}
+
+.cta-thirteen .inner-container::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.90;
+	background-color: var(--color-three);
+}
+
+.cta-thirteen_heading{
+	font-weight: 500;
+	line-height: 60px;
+	color: var(--headings-color);
+	font-size: var(--font-48);
+}
+
+.cta-thirteen_button{
+	position: relative;
+	margin-top: var(--margin-top-30);
+}
+
+.cta-thirteen_button .theme-btn{
+	text-transform: capitalize;
+}
+
+/*** 
+
+====================================================================
+	CTA Fourteen
+====================================================================
+
+***/
+
+.cta-fourteen{
+	position: relative;
+	padding:85px 0px 85px;
+	background-color: var(--main-color);
+}
+
+.cta-fourteen_icon{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	width: 65px;
+	height: 69px;
+	z-index: 1;
+	opacity: 0.20;
+	background-repeat: no-repeat;
+}
+
+.cta-fourteen_icon-two{
+	position: absolute;
+	left: 85%;
+	bottom: 10%;
+	width: 65px;
+	height: 69px;
+	z-index: 1;
+	opacity: 0.20;
+	background-repeat: no-repeat;
+}
+
+.cta-fourteen_pattern{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 50%;
+	clip-path: polygon(0 0, 89% 0, 100% 100%, 0% 100%);
+}
+
+.cta-fourteen_content{
+	position: relative;
+	max-width: 500px;
+	width: 100%;
+	float:right;
+}
+
+.cta-fourteen_title{
+	position: relative;
+	font-weight: 500;
+	font-size: var(--font-32);
+	color: var(--white-color);
+}
+
+.cta-fourteen_text{
+	position: relative;
+	font-weight: 400;
+	font-size: var(--font-18);
+	color: var(--white-color);
+	margin-top: var(--margin-top-20);
+}
+
+.cta-fourteen_phone{
+	position: relative;
+	font-weight: 500;
+	font-size: var(--font-18);
+	color: var(--white-color);
+	margin-top: var(--margin-top-30);
+	padding-left: var(--padding-left-50);
+}
+
+.cta-fourteen_phone span{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 35px;
+	height: 35px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 35px;
+	color: var(--headings-color);
+	display: inline-block;
+	background-color: var(--color-three);
+}
+
+/*** 
+
+====================================================================
+	CTA Fifteen
+====================================================================
+
+***/
+
+.cta-fifteen{
+	position: relative;
+	z-index: 10;
+	padding: 80px 0px;
+}
+
+.cta-fifteen .inner-container{
+	position: relative;
+}
+
+.cta-fifteen_title{
+	position: relative;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-24);
+}
+
+.cta-fifteen_heading{
+	position: relative;
+	line-height: 46px;
+	color: var(--white-color);
+	padding-left: var(--padding-left-100);
+}
+
+.cta-fifteen_title-icon{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	line-height: 1em;
+	color: var(--color-three);
+	font-family: "Flaticon";
+	font-size: var(--font-80);
+}
+
+/* Subscribe Box */
+
+.subscribe-box_five{
+    position: relative;
+	width:555px;
+	z-index: 2;
+}
+
+.subscribe-box_five .form-group {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.subscribe-box_five .form-group input[type="text"],
+.subscribe-box_five .form-group input[type="email"] {
+    position: relative;
+    line-height: 40px;
+    display: block;
+    height: 74px;
+    width: 100%;
+	background:none;
+	font-weight: 500;
+	border-radius: 5px;
+    box-shadow: inherit;
+    font-size: var(--font-18);
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    padding: 10px 15px 10px 30px;
+    color:var(--white-color);
+	border:1px solid rgba(var(--white-color-rgb), 0.20);
+}
+
+.subscribe-box_five .form-group button{
+    position: absolute;
+    right: 6px;
+    bottom: 5px;
+    font-weight: 500;
+    padding: 20px 32px;
+	border-radius: 5px;
+    display: inline-block;
+    font-size: var(--font-18);
+	color: var(--headings-color);
+    text-transform: capitalize;
+    background-color: var(--color-three);
+}
+
+.subscribe-box_five .form-group button span{
+	margin-right: var(--margin-right-5);
+}
+
+/*** 
+
+====================================================================
+	CTA Sixteen
+====================================================================
+
+***/
+
+.cta-sixteen{
+	position: relative;
+	padding: 100px 0px 70px;
+	background-color: var(--main-color);
+}
+
+.cta-sixteen_content-column{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.cta-sixteen_content-outer{
+	position: relative;
+}
+
+.cta-sixteen_title{
+	position: relative;
+	font-weight: 500;
+	color: var(--white-color);
+}
+
+.cta-sixteen_text{
+	position: relative;
+	font-weight: 400;
+	line-height: 32px;
+	font-size: var(--font-18);
+	color: var(--white-color);
+	margin-top: var(--margin-top-20);
+}
+
+.cta-sixteen_image-column{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.cta-sixteen_image-outer{
+	position: relative;
+}
+
+.cta-sixteen_counter{
+	position: relative;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 30px 30px 30px;
+	margin-top: var(--margin-top-30);
+	background-color: var(--headings-color);
+}
+
+.cta-sixteen_counter-outer{
+	position: relative;
+	padding-left: var(--padding-left-120);
+}
+
+.cta-sixteen_counter-count{
+	position: absolute;
+	left: 0px;
+	top: -5px;
+	line-height: 1em;
+	font-weight: 500;
+	font-size: var(--font-57);
+	color: var(--white-color);
+}
+
+.cta-sixteen_counter-rating{
+	position: relative;
+	color: var(--color-three);
+}

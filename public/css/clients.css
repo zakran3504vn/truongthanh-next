@@ -1,0 +1,113 @@
+/* TechCode Multipurpose Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	Clients One
+====================================================================
+
+***/
+
+.clients-one{
+	position: relative;
+	padding: 0px 0px 90px;
+}
+
+.clients-one .client-image{
+	position: relative;
+	text-align: center;
+}
+
+.clients-one .client-image img{
+	position: relative;
+	opacity: 0.30;
+	transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.clients-one .client-image img:hover{
+	opacity: 1;
+}
+
+.clients-one.style-two{
+	padding-top: 300px;
+	margin-top: -210px;
+	background-color: var(--color-seven);
+}
+
+.clients-one.style-two .client-image img{
+	opacity: 1;
+}
+
+/*** 
+
+====================================================================
+	Clients Two
+====================================================================
+
+***/
+
+.clients-two{
+	position: relative;
+	z-index: 1;
+}
+
+.clients-two .inner-container{
+	position: relative;
+	padding: 75px 65px;
+	text-align: center;
+	background-color: var(--color-six);
+}
+
+.clients-two_image{
+	position: relative;
+}
+
+.clients-two_image img{
+	position: relative;
+	transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.clients-two_image img:hover{
+	opacity: 1;
+}
+
+/*** 
+
+====================================================================
+	Clients Three
+====================================================================
+
+***/
+
+.clients-three{
+	position: relative;
+	text-align: center;
+	padding: 100px 0px;
+	background-color: var(--color-six);
+}
+
+.clients-three .client-image{
+	position: relative;
+}
+
+.clients-three .client-image img{
+	position: relative;
+	transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.clients-three .client-image img:hover{
+	opacity: 0.70;
+	filter: grayscale(100%);
+}

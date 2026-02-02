@@ -1,0 +1,1053 @@
+/* TechCode Multipurpose Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	Price One
+====================================================================
+
+***/
+
+.price-one{
+	position: relative;
+	overflow: hidden;
+	padding: 80px 0px 80px;
+}
+
+.price-block_one{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_one-inner{
+	position: relative;
+	padding: 50px 30px 35px;
+	background-color: var(--white-color);
+	margin-top: var(--margin-top-10);
+	margin-left: var(--margin-left-10);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+}
+
+.price-block_one-inner::before{
+	position: absolute;
+	content: '';
+	left: -10px;
+	top: -10px;
+	width: 330px;
+	height: 310px;
+	opacity: 0.10;
+	z-index: -1;
+	border-radius: 5px;
+	background-color: var(--main-color);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.price-block_one-inner:hover::before{
+	opacity: 0.90;
+}
+
+.price-block_one-icon{
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	border-radius: 5px;
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	background-color: rgba(var(--main-color-rgb), 0.10);
+}
+
+.price-block_one-inner:hover .price-block_one-icon{
+	transform: rotateY(180deg);
+}
+
+.price-block_one-number{
+	position: relative;
+	line-height: 1em;
+	font-weight: 500;
+	opacity: 0.10;
+	font-size: var(--font-57);
+	color: var(--headings-color);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.price-block_one-inner:hover .price-block_one-number{
+	opacity: 1;
+}
+
+.price-block_one-heading{
+	margin-top: var(--margin-top-40);
+}
+
+.price-block_one-text{
+	position: relative;
+	margin-top: var(--margin-top-10);
+}
+
+.price-block_one-list{
+	position: relative;
+	margin-top: var(--margin-top-20);
+}
+
+.price-block_one-list li{
+	position: relative;
+	padding-left: var(--padding-left-25);
+	margin-bottom: var(--margin-bottom-15);
+}
+
+.price-block_one-list li::before{
+	position: absolute;
+	content: '\f101';
+	left: 0px;
+	font-weight: 800;
+	color: var(--main-color);
+	font-size: var(--font-16);
+	font-family: "Font Awesome 6 Pro";
+}
+
+.price-block_one-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+.price-block_one-button{
+	position: relative;
+	margin-top: var(--margin-top-40);
+}
+
+.price-block_one-button a{
+	position: relative;
+	width: 100%;
+	font-weight: 600;
+	text-align: center;
+	padding: 16px 20px;
+	border-radius: 5px;
+	font-size: var(--font-17);
+	color: var(--main-color);
+	border: 1px solid var(--color-five);
+}
+
+.price-block_one-button a:hover{
+	color: var(--white-color);
+	border-color: var(--main-color);
+	background-color: var(--main-color);
+}
+
+
+/*** 
+
+====================================================================
+	Price Two
+====================================================================
+
+***/
+
+.price-two{
+	position: relative;
+	padding: 80px 0px 80px;
+}
+
+.price-block_two{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_two-inner{
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 6px;
+	padding: 45px 30px 40px;
+	background-color: var(--color-six);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.02);
+}
+
+.price-block_two-inner:hover{
+	background-color: var(--white-color);
+}
+
+.price-block_two-inner:hover::before{
+	height: 5px;
+}
+
+.price-block_two-inner::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	right: 0px;
+	height: 2px;
+	bottom: 0px;
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	background-color: var(--main-color);
+}
+
+.price-block_two-title{
+	position: relative;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-20);
+}
+
+.price-block_two-heading{
+	position: relative;
+	margin-top: var(--margin-top-25);
+}
+
+.price-block_two-text{
+	position: relative;
+	padding: 0px 20px;
+	margin-top: var(--margin-top-20);
+}
+
+.price-block_two-list{
+	position: relative;
+	margin-top: var(--margin-top-40);
+}
+
+.price-block_two-list li{
+	position: relative;
+	margin-bottom: var(--margin-bottom-15);
+}
+
+.price-block_two-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+.price-block_two_button{
+	position: relative;
+	margin-top: var(--margin-top-40);
+}
+
+/*** 
+
+====================================================================
+	Price Three
+====================================================================
+
+***/
+
+.price-three{
+	position: relative;
+	padding: 110px 0px 70px;
+	background-color: var(--color-six);
+}
+
+.price-block_three{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_three-inner{
+	position: relative;
+	padding: 65px 30px;
+	text-align: center;
+	border-radius: 8px;
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.02);
+}
+
+.price-block_three-inner::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0;
+	border-radius: 8px;
+	transform: scale(0.2,1);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	background-color: var(--color-three);
+}
+
+.price-block_three-inner:hover::before{
+	opacity: 1;
+	transform: scale(1,1);
+}
+
+.price-block_three-pattern{
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	right: 0px;
+	height: 247px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.price-block_three-title{
+	position: relative;
+	font-weight: 700;
+	color: var(--headings-color);
+	font-size: var(--font-32);
+}
+
+.price-block_three-price{
+	position: relative;
+	font-weight: 600;
+	width: 115px;
+	height: 100px;
+	border-radius: 10px;
+	display: inline-block;
+	color: var(--headings-color);
+	font-size: var(--font-32);
+	margin-top: var(--margin-top-60);
+	padding-top: var(--padding-top-30);
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
+.price-block_three-price sub{
+	position: relative;
+}
+
+.price-block_three-price sup{
+	position: absolute;
+	right: -20px;
+	top: -20px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-weight: 500;
+	border-radius: 50px;
+	color: var(--headings-color);
+	font-size: var(--font-20);
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
+.price-block_three-list{
+	position: relative;
+	margin-top: var(--margin-top-50);
+}
+
+.price-block_three-list li{
+	position: relative;
+	display: block;
+	margin-bottom: var(--margin-bottom-20);
+}
+
+.price-block_three-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+.price-block_three_button{
+	position: relative;
+	margin-top: var(--margin-top-45);
+}
+
+.price-block_three_button .theme-btn{
+	color: var(--headings-color);
+	border-color: var(--headings-color);
+}
+
+.price-block_three_button .theme-btn::before{
+	background-color: var(--headings-color);
+}
+
+/*** 
+
+====================================================================
+	Price Four
+====================================================================
+
+***/
+
+.price-four{
+	position: relative;
+	margin-top: -110px;
+	padding: 220px 0px 70px;
+	background-color: var(--main-color);
+}
+
+.price-block_four{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_four-inner{
+	position: relative;
+	padding: 50px 50px 0px;
+	border-radius: 6px;
+	overflow: hidden;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+	border: 1px solid rgba(var(--white-color-rgb), 0.20);
+}
+
+.price-block_four-inner:hover{
+	border-color: 1px solid rgba(var(--white-color-rgb), 0.60);
+}
+
+.price-block_four-circle{
+	position: absolute;
+	top: -420px;
+	left: -75px;
+	right: 0px;
+	height: 553px;
+	width: 553px;
+	border-radius: 50%;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+	background-color: rgba(var(--white-color-rgb), 0.10);
+}
+
+.price-block_four-inner:hover .price-block_four-circle{
+	background-color: rgba(var(--white-color-rgb), 1);
+}
+
+.price-block_four-inner:hover .price-block_four-title{
+	color: var(--main-color);
+}
+
+.price-block_four-title{
+	position: relative;
+	font-weight: 500;
+	text-align: center;
+	color: var(--white-color);
+	font-size: var(--font-40);
+	text-transform: capitalize;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.price-block_four-price{
+	position: relative;
+	display: inline-block;
+	color: var(--white-color);
+	font-size: var(--font-57);
+	margin-top: var(--margin-top-100);
+}
+
+.price-block_four-price sub{
+	position: relative;
+	font-weight: 400;
+	font-size: var(--font-20);
+}
+
+.price-block_four-text{
+	position: relative;
+	color: var(--white-color);
+	font-size: var(--font-18);
+	margin-top: var(--margin-top-20);
+}
+
+.price-block_four-list{
+	position: relative;
+	margin-top: var(--margin-top-30);
+}
+
+.price-block_four-list li{
+	position: relative;
+	display: block;
+	color: var(--white-color);
+	font-size: var(--font-18);
+	padding-left: var(--padding-left-35);
+	margin-bottom: var(--margin-bottom-20);
+}
+
+.price-block_four-list li::before{
+	position: absolute;
+	content: '\f058';
+	left: 0px;
+	font-weight: 800;
+	font-family: "Font Awesome 6 Pro";
+}
+
+.price-block_four-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+.price-block_four-button{
+	position: relative;
+	margin-top: var(--margin-top-60);
+}
+
+.price-block_four-button .theme-btn{
+	display: block;
+	padding: 18px 10px;
+	text-align: center;
+	font-weight: 600;
+	margin-left: -50px;
+	margin-right: -50px;
+	color: var(--headings-color);
+	font-size: var(--font-16);
+	text-transform: capitalize;
+	background-color: var(--color-three);
+}
+
+.price-block_four-button .theme-btn:hover{
+	background-color: var(--white-color);
+}
+
+/*** 
+
+====================================================================
+	Price Five
+====================================================================
+
+***/
+
+.price-five{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-six);
+}
+
+.price-block_five{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_five-inner{
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: var(--white-color);
+	border-bottom: 5px solid var(--main-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
+.price-block_five-title{
+	position: relative;
+	font-weight: 500;
+	padding: 22px 10px;
+	text-align: center;
+	font-size: var(--font-20);
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+.price-block_five-content{
+	position: relative;
+	padding: 40px 15px 50px;
+}
+
+.price-block_five-price{
+	position: relative;
+	font-weight: 500;
+	line-height: 1em;
+	text-align: center;
+	font-size: var(--font-57);
+	color: var(--black-color);
+}
+
+.price-block_five-price span{
+	position: relative;
+	font-size: var(--font-20);
+	color: var(--color-four);
+}
+
+.price-block_five-text{
+	position: relative;
+	text-align: center;
+}
+
+.price-block_five-button{
+	position: relative;
+	margin-top: var(--margin-top-25);
+}
+
+.price-block_five-button .start-btn{
+	position: relative;
+	padding: 18px 36px;
+	font-weight: 500;
+	border-radius: 5px;
+	color: var(--headings-color);
+	font-size: var(--font-17);
+	text-transform: capitalize;
+	border:1px solid rgba(var(--black-color-rgb), 0.10);
+}
+
+.price-block_five-button .start-btn i{
+	position: relative;
+	color: var(--color-three);
+}
+
+.price-block_five-button .start-btn:hover{
+	color: var(--white-color);
+	border-color: var(--headings-color);
+	background-color: var(--headings-color);
+}
+
+.price-block_five-list{
+	position: relative;
+	margin-top: var(--margin-top-30);
+	margin-left: var(--margin-left-50);
+}
+
+.price-block_five-list li{
+	position: relative;
+	display: block;
+	color: var(--headings-color);
+	padding-left: var(--padding-left-35);
+	margin-bottom: var(--margin-bottom-20);
+}
+
+.price-block_five-list li::before{
+	position: absolute;
+	content: '\f058';
+	left: 0px;
+	font-weight: 800;
+	color: var(--main-color);
+	font-family: "Font Awesome 6 Pro";
+}
+
+.price-block_five-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+/*** 
+
+====================================================================
+	Price Six
+====================================================================
+
+***/
+
+.price-six{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-six);
+}
+
+.price-block_six{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_six-inner{
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 45px 15px 50px;
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
+.price-block_six-title{
+	position: relative;
+	font-weight: 500;
+	text-align: center;
+	color: var(--headings-color);
+	font-size: var(--font-20);
+}
+
+.price-block_six-price{
+	position: relative;
+	font-weight: 500;
+	line-height: 1em;
+	text-align: center;
+	font-size: var(--font-57);
+	color: var(--black-color);
+	margin-top: var(--margin-top-20);
+}
+
+.price-block_six-price span{
+	position: relative;
+	font-size: var(--font-20);
+	color: var(--color-four);
+}
+
+.price-block_six-text{
+	position: relative;
+	text-align: center;
+}
+
+.price-block_six-button{
+	position: relative;
+	margin-top: var(--margin-top-25);
+}
+
+.price-block_six-button .start-btn{
+	position: relative;
+	padding: 20px 36px;
+	font-weight: 500;
+	border-radius: 5px;
+	color: var(--white-color);
+	font-size: var(--font-17);
+	text-transform: capitalize;
+	background-color: var(--main-color);
+}
+
+.price-block_six-button .start-btn i{
+	position: relative;
+}
+
+.price-block_six-button .start-btn:hover{
+	color: var(--white-color);
+	background-color: var(--color-three);
+}
+
+.price-block_six-list{
+	position: relative;
+	margin-top: var(--margin-top-50);
+	margin-left: var(--margin-left-50);
+}
+
+.price-block_six-list li{
+	position: relative;
+	display: block;
+	padding-left: var(--padding-left-35);
+	margin-bottom: var(--margin-bottom-15);
+}
+
+.price-block_six-list li::before{
+	position: absolute;
+	content: '\f058';
+	left: 0px;
+	font-weight: 800;
+	color: var(--main-color);
+	font-family: "Font Awesome 6 Pro";
+}
+
+.price-block_six-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+
+/*** 
+
+====================================================================
+	Plan One
+====================================================================
+
+***/
+
+.plan-one{
+	position: relative;
+	padding: 0px 0px 110px;
+}
+
+/*** 
+
+====================================================================
+	Plan Tabs Style
+====================================================================
+
+***/
+
+.plan-tabs{
+	position:relative;
+}
+
+.plan-tabs .tab-btns{
+	position:relative;
+	text-align: center;
+}
+
+.plan-tabs .tab-btns .tab-btn{
+	position:relative;
+	margin:0px 10px;
+	line-height:24px;
+	cursor:pointer;
+	font-weight:500;
+	padding:18px 44px;
+	border-radius: 5px;
+	display:inline-block;
+	color:var(--white-color);
+	font-size:var(--font-18);
+	transition:all 500ms ease;
+	border: 1px solid rgba(var(--white-color-rgb), 0.30);
+}
+
+.plan-tabs .tab-btns .tab-btn:hover,
+.plan-tabs .tab-btns .tab-btn.active-btn{
+	color:var(--white-color);
+	border-color:var(--color-three);
+}
+
+.plan-tabs .tabs-content{
+	position:relative;
+	padding:60px 0px 0px;
+}
+
+.plan-tabs .tabs-content .tab{
+	position:relative;
+	display:none;
+	border-top:0px;
+}
+
+.plan-tabs .tabs-content .tab.active-tab{
+	display:block;	
+}
+
+.price-block_seven{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_seven-inner{
+	position: relative;
+	border-radius: 5px;
+	padding: 40px 40px 40px;
+	background-color: rgba(var(--white-color-rgb), 0.05);
+}
+
+.price-block_seven-inner:hover .price-block_seven-icon{
+	-webkit-transform: scale(-1) rotateX(180deg);
+    -moz-transform: scale(-1) rotateX(180deg);
+    -ms-transform: scale(-1) rotateX(180deg);
+    -o-transform: scale(-1) rotateX(180deg);
+    transform: scale(-1) rotateX(180deg);
+	background-color: var(--color-three);
+	color: var(--white-color);
+}
+
+.price-block_seven-icon{
+	position: absolute;
+	right: 40px;
+	top: 40px;
+	width: 82px;
+	height: 82px;
+	line-height: 82px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: var(--font-50);
+	color: var(--color-three);
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	background-color: rgba(var(--white-color-rgb), 0.05);
+}
+
+.price-block_seven-title{
+	position: relative;
+	font-weight: 500;
+	opacity: 0.50;
+	color: var(--white-color);
+	font-size: var(--font-20);
+	padding-top: var(--padding-top-15);
+}
+
+.price-block_seven-price{
+	position: relative;
+	font-weight: 700;
+	color: var(--white-color);
+	font-size: var(--font-22);
+}
+
+.price-block_seven-list{
+	position: relative;
+	margin-top: var(--margin-top-50);
+}
+
+.price-block_seven-list li{
+	position: relative;
+	display: block;
+	color: var(--white-color);
+	font-size: var(--font-18);
+	padding-left: var(--padding-left-35);
+	margin-bottom: var(--margin-bottom-15);
+}
+
+.price-block_seven-list li::before{
+	position: absolute;
+	content: '\f101';
+	left: 0px;
+	font-weight: 800;
+	font-family: "Font Awesome 6 Pro";
+}
+
+.price-block_seven-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+.price-block_seven-button{
+	position: relative;
+	margin-top: var(--margin-top-50);
+}
+
+.price-block_seven-plan-btn{
+	position: relative;
+	display: block;
+	padding: 18px 15px;
+	text-align: center;
+	border-radius: 5px;
+	color: var(--white-color);
+	text-transform: capitalize;
+	background-color: rgba(var(--white-color-rgb), 0.05);
+}
+
+.price-block_seven-plan-btn:hover{
+	color: var(--headings-color);
+	background-color: var(--color-three);
+}
+
+/*** 
+
+====================================================================
+	Plan Two
+====================================================================
+
+***/
+
+.plan-two{
+	position: relative;
+	padding: 110px 0px 80px;
+}
+
+.price-block_eight{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.price-block_eight-inner{
+	position: relative;
+	padding: 0px 20px 35px;
+}
+
+.price-block_eight-inner::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 50px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 5px;
+	border: 1px solid rgba(var(--black-color-rgb), 0.10);
+}
+
+.price-block_eight-icon{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 50px;
+	font-size: var(--font-50);
+	color: var(--main-color);
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
+.price-block_eight-inner:hover .price-block_eight-icon{
+	color: var(--white-color);
+	background-color: var(--main-color);
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.price-block_eight-title{
+	position: relative;
+	text-align: center;
+	color: var(--headings-color);
+	font-size: var(--font-32);
+	margin-top: var(--margin-top-30);
+	padding-bottom: var(--padding-bottom-20);
+	border-bottom: 1px solid rgba(var(--black-color-rgb), 0.10);
+}
+
+.price-block_eight-content{
+	position: relative;
+	padding: 30px 30px 0px;
+}
+
+.price-block_eight-price{
+	position: relative;
+	font-weight: 500;
+	color: var(--headings-color);
+	font-size: var(--font-20);
+	text-transform: uppercase;
+}
+
+.price-block_eight-price span{
+	position: relative;
+	display: block;
+	font-size: var(--font-18);
+	text-transform: capitalize;
+	margin-top: var(--margin-top-10);
+}
+
+.price-block_eight-list{
+	position: relative;
+	margin-top: var(--margin-top-70);
+}
+
+.price-block_eight-list li{
+	position: relative;
+	display: block;
+	padding-left: var(--padding-left-35);
+	margin-bottom: var(--margin-bottom-15);
+}
+
+.price-block_eight-list li::before{
+	position: absolute;
+	content: '\f101';
+	left: 0px;
+	font-weight: 800;
+	color: var(--main-color);
+	font-family: "Font Awesome 6 Pro";
+}
+
+.price-block_eight-list li:last-child{
+	margin-bottom: var(--margin-zero);
+}
+
+.price-block_eight-button{
+	position: relative;
+	margin-top: var(--margin-top-50);
+}
+
+.price-block_eight-plan-btn{
+	position: relative;
+	display: block;
+	font-weight: 600;
+	padding: 17px 15px;
+	text-align: center;
+	border-radius: 5px;
+	color: var(--headings-color);
+	font-size: var(--font-18);
+	text-transform: capitalize;
+	background-color: var(--color-six);
+	border: 1px solid rgba(var(--black-color-rgb), 0.10);
+}
+
+.price-block_eight-plan-btn:hover{
+	color: var(--white-color);
+	border-color: var(--main-color);
+	background-color: var(--main-color);
+}
+

@@ -1,0 +1,88 @@
+/* RTL Style CSS Code */
+
+.rtl .row,
+.rtl .d-flex{
+	flex-direction: row-reverse;
+}
+
+.rtl .main-header .nav-btn{
+	right:0px;
+	left:auto;
+}
+
+.rtl .main-menu .navigation > li{
+	float:right;
+}
+
+.rtl .main-menu{
+	text-align:right;
+}
+
+.rtl .main-menu .navigation > li:last-child{
+	margin-right:var(--margin-right-20) !important;
+}
+
+.rtl .main-header .main-menu .navigation > li > ul > li > ul > li,
+.rtl .main-header .main-menu .navigation > li > ul > li,
+.rtl .main-menu .navigation > li > ul > li{
+	text-align:right;
+}
+
+.rtl .main-header .main-menu .navigation > li > ul{
+	padding:20px 25px 20px 25px;
+}
+
+.rtl .main-header .main-menu .navigation > li > ul > li > a:before{
+	right:0px;
+	left:auto;
+}
+
+.rtl .main-menu .navigation > li > ul > li:hover > a{
+	padding-left:0px !important;
+	padding-right:30px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > a:before{
+	left:auto;
+	right:8px;
+}
+
+.rtl .main-menu .navigation > li > ul > li.dropdown > a:after{
+	right:auto;
+	left:10px;
+	transform:rotate(180deg);
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul{
+	left:auto;
+	right:100%;
+}
+
+.rtl .main-menu .navigation li > ul > li.dropdown:hover > ul{
+	
+}
+
+.rtl .main-header .main-menu .navigation > li > ul > li > ul{
+	right:100%;
+	left:auto;
+}
+
+.rtl .main-menu .navigation > li > ul{
+	left:auto;
+	right:0px;
+}
+
+.rtl .main-menu .navigation > li.dropdown:hover > ul{
+	left:auto;
+	right:0px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul > li:hover > a{
+	padding-left:0px;
+	padding-right:30px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul > li > a:before{
+	left:auto;
+	right:8px;
+}

@@ -1,0 +1,1128 @@
+/* TechCode Multipurpose Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	Services One
+====================================================================
+
+***/
+
+.services-one{
+	position: relative;
+	padding: 110px 0px 80px;
+}
+
+.services-block_one{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_one-inner{
+	position: relative;
+	text-align: center;
+	padding: 40px 50px;
+	border-radius: 7px;
+	border: 1px solid var(--color-five);
+}
+
+.services-block_one-inner:hover .services-block_one-icon{
+	transform: rotateY(180deg);
+}
+
+.services-block_one-icon{
+	position: relative;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	display: block;
+	line-height: 116px;
+	border-radius: 150px;
+	border: 1px solid var(--color-five);
+
+	-webkit-transition: all 600ms ease;
+	-moz-transition: all 600ms ease;
+	-ms-transition: all 600ms ease;
+	-o-transition: all 600ms ease;
+	transition: all 600ms ease;
+}
+
+.services-block_one-heading{
+	position: relative;
+	margin-top: var(--margin-top-30);
+}
+
+.services-block_one-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_one-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_one-text{
+	position: relative;
+	margin-top: var(--margin-top-15);
+}
+
+/*** 
+
+====================================================================
+	Services Two
+====================================================================
+
+***/
+
+.services-two{
+	position: relative;
+	padding: 110px 0px 0px;
+	background-color: var(--color-six);
+}
+
+.services-block_two{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_two-inner{
+	position: relative;
+	padding: 30px 30px;
+	background-color: var(--white-color);
+}
+
+.services-block_two-icon{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+	color: var(--main-color);
+	font-size: var(--font-36);
+
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+
+	background-color: rgba(var(--main-color-rgb), 0.10);
+}
+
+.services-block_two-inner:hover .services-block_two-icon{
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.services-block_two-heading{
+	position: relative;
+	margin-top: var(--margin-top-25);
+}
+
+.services-block_two-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_two-text{
+	position: relative;	
+	margin-top: var(--margin-top-10);
+	padding-right: var(--padding-right-10);
+}
+
+/*** 
+
+====================================================================
+	Services Three
+====================================================================
+
+***/
+
+.services-three{
+	position: relative;
+	padding: 110px 0px 70px;
+	background-color: var(--color-six);
+}
+
+.services-block_three{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_three-inner{
+	position: relative;
+	padding: 35px 50px;
+	text-align: center;
+	border-radius: 6px;
+	background-color: var(--white-color);
+	border: 2px solid var(--color-five);
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_three-inner:hover{
+	border-color: var(--white-color);
+}
+
+.services-block_three-inner::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	bottom: -1px;
+	right: 0px;
+	height: 4px;
+	opacity: 0;
+	transform: scale(0.2,1);
+	background-color: var(--main-color);
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_three-inner:hover::before{
+	opacity: 1;
+	transform: scale(1,1);
+}
+
+.services-block_three:nth-child(2n + 0) .services-block_three-icon{
+	background-color: var(--main-color);
+}
+
+.services-block_three-icon{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+
+	background-color: var(--color-three);
+}
+
+.services-block_three-inner:hover .services-block_three-icon{
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.services-block_three-heading{
+	margin-top: var(--margin-top-25);
+}
+
+.services-block_three-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_three-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_three-text{
+	position: relative;
+	margin-top: var(--margin-top-10);
+}
+
+.services-block_three-more{
+	position: relative;
+	font-weight: 600;
+	display: inline-block;
+	color: var(--headings-color);
+	font-size: var(--font-17);
+	margin-top: var(--margin-top-20);
+	padding-right: var(--padding-right-25);
+}
+
+.services-block_three-more::before{
+	position: absolute;
+	content: '\f061';
+	right: 0px;
+	top: 7px;
+	line-height: 1em;
+	color: var(--main-color);
+	font-family: "Font Awesome 6 Pro";
+}
+
+/*** 
+
+====================================================================
+	Services Four
+====================================================================
+
+***/
+
+.services-four{
+	position: relative;
+	padding: 0px 0px 70px;
+}
+
+.services-block_four{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_four-inner{
+	position: relative;
+	padding: 50px 50px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: var(--white-color);
+	border-bottom: 3px solid var(--color-three);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+}
+
+.services-block_four-icon{
+	position: relative;
+	display: inline-block;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_four-inner:hover .services-block_four-icon{
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.services-block_four-heading{
+	margin-top: var(--margin-top-30);
+}
+
+.services-block_four-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_four-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_four-text{
+	position: relative;
+	margin-top: var(--margin-top-10);
+}
+
+.services-block_four-more{
+	position: relative;
+    padding: 14px 30px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--headings-color);
+    text-transform: capitalize;
+    margin-top: var(--margin-top-25);
+    border: 1px solid var(--color-five);
+    transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_four-more:hover{
+	color: var(--white-color);
+	border-color: var(--main-color);
+	background-color: var(--main-color);
+}
+
+/*** 
+
+====================================================================
+	Services Five
+====================================================================
+
+***/
+
+.services-five{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-color: var(--color-eleven);
+}
+
+.services-block_five{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_five-inner{
+	position: relative;
+	text-align: center;
+	padding: 0px 30px 30px;
+}
+
+.services-block_five-inner::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 40px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 8px;
+	background-color: var(--white-color);
+}
+
+.services-block_five-icon{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	line-height: 80px;
+	border-radius: 6px;
+	font-size: var(--font-44);
+	color: var(--white-color);
+	background-color: var(--main-color);
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_five-inner:hover .services-block_five-icon{
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.services-block_five-heading{
+	position: relative;
+	font-weight: 600;
+	margin-top: var(--margin-top-35);
+}
+
+.services-block_five-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_five-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_five-text{
+	position: relative;
+	margin-top: var(--margin-top-15);
+}
+
+.services-block_five-more{
+	position: relative;
+	font-weight: 600;
+	display: inline-block;
+	color: var(--headings-color);
+	font-size: var(--font-17);
+	text-transform: capitalize;
+	margin-top: var(--margin-top-50);
+	padding-right: var(--padding-right-25);
+}
+
+.services-block_five-more::before{
+	position: absolute;
+	content:'\f061';
+	right: 0px;
+	top: 6px;
+	line-height: 1em;
+	color: var(--color-three);
+	font-family: "Font Awesome 6 Pro";
+}
+
+.services-block_five-more:hover{
+	color: var(--main-color);
+}
+
+/*** 
+
+====================================================================
+	Services Six
+====================================================================
+
+***/
+
+.services-six{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-six);
+}
+
+.services-block_six{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_six-inner{
+	position: relative;
+	padding: 35px 35px;
+	border-radius: 5px;
+	background-color: var(--white-color);
+	border: 1px solid transparent;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.services-block_six-inner:hover{
+	border-color:var(--main-color);
+}
+
+.services-block_six-icon{
+	position: absolute;
+	right: 35px;
+	top: 35px;
+	line-height: 1em;
+	color: var(--main-color);
+	font-size: var(--font-56);
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+}
+
+.services-block_six-inner:hover .services-block_six-icon{
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.services-block_six-title{
+	position: relative;
+	text-transform: capitalize;
+}
+
+.services-block_six-heading{
+	margin-top: var(--margin-top-10);
+}
+
+.services-block_six-heading a{
+	position: relative;
+}
+
+.services-block_six-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_six-text{
+	position: relative;
+	margin-top: var(--margin-top-15);
+}
+
+/*** 
+
+====================================================================
+	Services Seven
+====================================================================
+
+***/
+
+.services-seven{
+	position: relative;
+	padding: 110px 0px 80px;
+}
+
+.services-seven_color-layer{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	height: 350px;
+	background-color: var(--color-six);
+}
+
+.services-block_seven{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_seven-inner{
+	position: relative;
+}
+
+.services-block_seven-image{
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+	z-index: -1;
+	background-color: var(--main-color);
+}
+
+.services-block_seven-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.services-block_seven-inner:hover .services-block_seven-image img{
+	opacity: 0.70;
+	transform: scale(1.05,1.05);
+}
+
+.services-block_seven-content{
+	position: relative;
+	padding: 25px 25px;
+	border-radius: 10px;
+	margin-top: -100px;
+	margin-left: var(--margin-left-15);
+	margin-right: var(--margin-right-15);
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.02);
+}
+
+.services-block_seven-content::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: -1;
+	border-radius: 5px;
+	transform: rotate(5deg);
+	background-color: var(--color-six);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.services-block_seven-inner:hover .services-block_seven-content::before{
+	transform: rotate(-5deg);
+}
+
+.services-block_seven-icon{
+	position: relative;
+	width: 65px;
+	height: 65px;
+	line-height: 65px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: var(--font-34);
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+.services-block_seven-heading{
+	position: relative;
+	margin-top: var(--margin-top-25);
+}
+
+.services-block_seven-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_seven-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_seven-text{
+	position: relative;
+	margin-top: var(--margin-top-10);
+}
+
+.services-block_seven-more{
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 1px;
+	display: inline-block;
+	color: var(--main-color);
+	font-size: var(--font-17);
+	margin-top: var(--margin-top-20);
+	padding-right: var(--padding-right-25);
+}
+
+.services-block_seven-more::before{
+	position: absolute;
+	content: '\f061';
+	right: 0px;
+	top: 6px;
+	line-height: 1em;
+	font-family: "Font Awesome 6 Pro";
+}
+
+.services-block_seven-more:hover{
+	color: var(--headings-color);
+}
+
+/*** 
+
+====================================================================
+	Services Eight
+====================================================================
+
+***/
+
+.services-eight{
+	position: relative;
+	padding-bottom: var(--padding-bottom-90);
+}
+
+.services-block_eight{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_eight-inner{
+	position: relative;
+}
+
+.services-block_eight-image{
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+	margin: 0px 25px;
+	background-color: var(--main-color);
+}
+
+.services-block_eight-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.services-block_eight-inner:hover .services-block_eight-image img{
+	opacity: 0.70;
+	transform: scale(1.05,1.05);
+}
+
+.services-block_eight-content{
+	position: relative;
+	border-radius: 6px;
+	padding: 0px 45px 30px;
+	background-color: var(--white-color);
+	border: 1px solid rgba(var(--black-color-rgb), 0.09);
+}
+
+.services-block_eight-icon{
+	position: relative;
+	top: -22px;
+	border-radius: 5px;
+	margin-top: -10px;
+	display: inline-block;
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+}
+
+.services-block_eight-inner:hover .services-block_eight-icon{
+	transform: rotateY(180deg);
+}
+
+.services-block_eight-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_eight-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_eight-text{
+	position: relative;
+	margin-top: var(--margin-top-15);
+}
+
+/*** 
+
+====================================================================
+	Services Nine
+====================================================================
+
+***/
+
+.services-nine{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-seven);
+}
+
+.services-block_nine{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_nine-inner{
+	position: relative;
+	padding: 40px 40px;
+	border-radius: 5px;
+	border: 1px solid rgba(var(--white-color-rgb), 0.20);
+}
+
+.services-block_nine-icon{
+	position: relative;
+	display: inline-block;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_nine-inner:hover .services-block_nine-icon{
+	transform: rotateY(180deg);
+}
+
+.services-block_nine-heading{
+	position: relative;
+	font-size: var(--font-32);
+	margin-top: var(--margin-top-10);
+}
+
+.services-block_nine-heading a{
+	position: relative;
+	color: var(--white-color);
+}
+
+.services-block_nine-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_nine-text{
+	position: relative;
+	line-height: 32px;
+	font-size: var(--font-18);
+	color: var(--white-color);
+	margin-top: var(--margin-top-20);
+}
+
+.services-block_nine-more{
+	position: relative;
+	font-weight: 600;
+	display: inline-block;
+	color: var(--main-color);
+	font-size: var(--font-17);
+	margin-top: var(--margin-top-20);
+	padding-right: var(--padding-right-25);
+}
+
+.services-block_nine-more::before{
+	position: absolute;
+	content: '\f061';
+	right: 0px;
+	top: 6px;
+	line-height: 1em;
+	color: var(--main-color);
+	font-family: "Font Awesome 6 Pro";
+}
+
+.services-block_nine-more:hover{
+	color: var(--white-color);
+}
+
+/*** 
+
+====================================================================
+	Services Ten
+====================================================================
+
+***/
+
+.services-ten{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-six);
+}
+
+.services-block_ten{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_ten-inner{
+	position: relative;
+	padding: 0px 35px 0px;
+}
+
+.services-block_ten-inner::before{
+	position: absolute;
+	content: '';
+	top:40px;
+	left: 0px;
+	right: 0px;
+	bottom: 30px;
+	border: 1px solid rgba(var(--black-color-rgb), 0.10);
+
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 100ms ease;
+	-ms-transition: all 1000ms ease;
+	-o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
+}
+
+.services-block_ten-inner:hover::before{
+	border-color: var(--white-color);
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
+.services-block_ten-icon{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	background-color: var(--white-color);
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.services-block_ten-inner:hover .services-block_ten-icon{
+	transform: rotateY(180deg);
+}
+
+.services-block_ten-number{
+	position: absolute;
+	right: 35px;
+	top: 60px;
+	font-weight: 700;
+	line-height: 1em;
+	font-size: var(--font-64);
+
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.20);
+}
+
+.services-block_ten-heading{
+	position: relative;
+	margin-top: var(--margin-top-30);
+}
+
+.services-block_ten-heading a{
+	position: relative;
+	color: var(--headings-color);
+}
+
+.services-block_ten-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_ten-text{
+	position: relative;
+	margin-top: var(--margin-top-15);
+}
+
+.services-block_ten-arrow_box{
+	position: relative;
+	text-align: center;
+	margin-top: var(--margin-top-30);
+}
+
+.services-block_ten-arrow{
+	position: relative;
+	width: 65px;
+	height: 65px;
+	line-height: 65px !important;
+	text-align: center;
+	color: var(--headings-color);
+	display: inline-block;
+	font-size: var(--font-24);
+	background-color: var(--color-three);
+}
+
+/*** 
+
+====================================================================
+	Services Eleven
+====================================================================
+
+***/
+
+.services-eleven{
+	position: relative;
+	padding: 110px 0px 80px;
+}
+
+.services-block_eleven{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_eleven-inner{
+	position: relative;
+	padding: 40px 35px;
+	border-radius: 6px;
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+	background-color: rgba(var(--white-color-rgb), 0.03);
+}
+
+.services-block_eleven-inner:hover{
+	border-color: var(--white-color);
+}
+
+.services-block_eleven-icon{
+	position: relative;
+	line-height: 1em;
+	display: inline-block;
+	font-size: var(--font-60);
+	transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+	color: var(--color-fifteen);
+}
+
+.services-block_eleven-inner:hover .services-block_eleven-icon{
+	-webkit-transform: scale(-1) rotate(180deg);
+    -moz-transform: scale(-1) rotate(180deg);
+    -ms-transform: scale(-1) rotate(180deg);
+    -o-transform: scale(-1) rotate(180deg);
+    transform: scale(-1) rotate(180deg);
+}
+
+.services-block_eleven-heading{
+	position: relative;
+	color: var(--white-color);
+	margin-top: var(--margin-top-30);
+}
+
+.services-block_eleven-heading a{
+	position: relative;
+	color: var(--white-color);
+}
+
+.services-block_eleven-heading a:hover{
+	color: var(--color-fifteen);
+}
+
+.services-block_eleven-text{
+	position: relative;
+	color: var(--white-color);
+	margin-top: var(--margin-top-15);
+}
+
+.services-block_eleven-more{
+	position: relative;
+	font-weight: 600;
+	padding: 18px 35px;
+	border-radius: 5px;
+	display: inline-block;
+	color: var(--white-color);
+	font-size: var(--font-17);
+	margin-top: var(--margin-top-30);
+	border: 1px solid rgba(var(--white-color-rgb), 0.10);
+}
+
+.services-block_eleven-more i{
+	position: relative;
+	line-height: 1em;
+}
+
+.services-block_eleven-more:hover{
+	color: var(--headings-color);
+	border-color: var(--color-fifteen);
+	background-color: var(--color-fifteen);
+}
+
+/*** 
+
+====================================================================
+	Services Twelve
+====================================================================
+
+***/
+
+.services-twelve{
+	position: relative;
+	padding: 110px 0px 80px;
+	background-color: var(--color-six);
+}
+
+.services-block_twelve{
+	position: relative;
+	margin-bottom: var(--margin-bottom-30);
+}
+
+.services-block_twelve-inner{
+	position: relative;
+}
+
+.services-block_twelve-content{
+	position: relative;
+	padding: 35px 30px;
+	background-color: var(--white-color);
+}
+
+.services-block_twelve-title{
+	color: var(--main-color);
+}
+
+.services-block_twelve-heading a{
+	color: var(--headings-color);
+}
+
+.services-block_twelve-heading a:hover{
+	color: var(--main-color);
+}
+
+.services-block_twelve-image{
+	position: relative;
+	overflow: hidden;
+	background-color: var(--main-color);
+}
+
+.services-block_twelve-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.services-block_twelve-inner:hover .services-block_twelve-image img{
+	opacity: 0.60;
+	transform: scale(1.05,1.05);
+}
