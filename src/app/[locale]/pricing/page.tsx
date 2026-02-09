@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 export default async function PricingPage({
   params,
@@ -6,23 +7,10 @@ export default async function PricingPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const safeLocale = locale === "en" ? "en" : "vi";
+  const safeLocale: Locale = locale === "en" ? "en" : "vi";
 
-  // Translations for CTA Five section
-  const ctaFiveTranslations = {
-    vi: {
-      heading: "Đăng ký ngay để nhận thêm thông tin về chúng tôi",
-      emailPlaceholder: "Nhập email của bạn",
-      buttonText: "Đăng ký ngay",
-    },
-    en: {
-      heading: "Subscribe Now For More Information About Us",
-      emailPlaceholder: "Enter Your Email",
-      buttonText: "Subscribe Now",
-    },
-  };
-
-  const ctaFiveText = ctaFiveTranslations[safeLocale];
+  // Lấy translations từ file tập trung
+  const t = getTranslations(safeLocale);
 
   return (
     <>
@@ -35,14 +23,14 @@ export default async function PricingPage({
       >
         <div className="auto-container">
           <div className="title-outer d-sm-flex align-items-center justify-content-sm-between">
-            <h1 className="title">
-              {safeLocale === "vi" ? "Bảng Giá" : "Pricing"}
-            </h1>
+            <h1 className="title">{t.pricing.pageTitle.title}</h1>
             <ul className="page-breadcrumb">
               <li>
-                <Link href={safeLocale === "vi" ? "/vi" : "/en"}>Home</Link>
+                <Link href={safeLocale === "vi" ? "/vi" : "/en"}>
+                  {t.pricing.pageTitle.home}
+                </Link>
               </li>
-              <li>{safeLocale === "vi" ? "Bảng Giá" : "Pricing"}</li>
+              <li>{t.pricing.pageTitle.breadcrumb}</li>
             </ul>
           </div>
         </div>
@@ -53,81 +41,46 @@ export default async function PricingPage({
       <section className="price-one pt-120">
         <div className="auto-container">
           <div className="row clearfix">
-            {/* Price Block One */}
-            <div className="price-block_one col-lg-4 col-md-6">
-              <div className="price-block_one-inner">
-                <div className="price-block_one-number">01</div>
-                <div className="price-block_one-icon">
-                  <img src="/images/resource/price-1.png" alt="" />
+            {t.pricing.plans.map((plan, index) => {
+              const icons = [
+                "/images/resource/price-1.png",
+                "/images/resource/price-2.png",
+                "/images/resource/price-3.png",
+              ];
+              const iconSrc = icons[index] ?? icons[0];
+
+              return (
+                <div
+                  key={plan.name + index}
+                  className="price-block_one col-lg-4 col-md-6"
+                >
+                  <div className="price-block_one-inner">
+                    <div className="price-block_one-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="price-block_one-icon">
+                      <img src={iconSrc} alt="" />
+                    </div>
+                    <h4 className="price-block_one-heading">{plan.name}</h4>
+                    <div className="price-block_one-text">
+                      {plan.description}
+                    </div>
+                    <ul className="price-block_one-list">
+                      <li>{plan.price}</li>
+                      <li>{plan.period}</li>
+                      <li>{plan.discount}</li>
+                      <li>{plan.bonus}</li>
+                      <li>{plan.planLabel}</li>
+                    </ul>
+                    <div className="price-block_one-button">
+                      <a href={`/${safeLocale}/contact`} className="theme-btn">
+                        {plan.buttonText}
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="price-block_one-heading">Turbo Hosting</h4>
-                <div className="price-block_one-text">
-                  Lorem Ipsum is simply is dumiomy Lorem Ipsum is simply
-                </div>
-                <ul className="price-block_one-list">
-                  <li>Starting 200$</li>
-                  <li>Every Day</li>
-                  <li>Up To 10% Discount</li>
-                  <li>Plus Bonus</li>
-                  <li>Service Plan</li>
-                </ul>
-                <div className="price-block_one-button">
-                  <a href="page-pricing.html" className="theme-btn">
-                    Get this plan
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Price Block One */}
-            <div className="price-block_one col-lg-4 col-md-6">
-              <div className="price-block_one-inner">
-                <div className="price-block_one-number">02</div>
-                <div className="price-block_one-icon">
-                  <img src="/images/resource/price-2.png" alt="" />
-                </div>
-                <h4 className="price-block_one-heading">Turbo Hosting</h4>
-                <div className="price-block_one-text">
-                  Lorem Ipsum is simply is dumiomy Lorem Ipsum is simply
-                </div>
-                <ul className="price-block_one-list">
-                  <li>Starting 500$</li>
-                  <li>Every Day</li>
-                  <li>Up To 50% Discount</li>
-                  <li>Plus Bonus</li>
-                  <li>Service Plan</li>
-                </ul>
-                <div className="price-block_one-button">
-                  <a href="page-pricing.html" className="theme-btn">
-                    Get this plan
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Price Block One */}
-            <div className="price-block_one col-lg-4 col-md-6">
-              <div className="price-block_one-inner">
-                <div className="price-block_one-number">03</div>
-                <div className="price-block_one-icon">
-                  <img src="/images/resource/price-3.png" alt="" />
-                </div>
-                <h4 className="price-block_one-heading">Turbo Hosting</h4>
-                <div className="price-block_one-text">
-                  Lorem Ipsum is simply is dumiomy Lorem Ipsum is simply
-                </div>
-                <ul className="price-block_one-list">
-                  <li>Starting 1000$</li>
-                  <li>Every Day</li>
-                  <li>Up To 80% Discount</li>
-                  <li>Plus Bonus</li>
-                  <li>Service Plan</li>
-                </ul>
-                <div className="price-block_one-button">
-                  <a href="page-pricing.html" className="theme-btn">
-                    Get this plan
-                  </a>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -148,7 +101,7 @@ export default async function PricingPage({
             <span className="cta-five_color-two"></span>
             <div className="row clearfix">
               <div className="col-lg-6 col-md-12 col-sm-12">
-                <h3 className="cta-five_heading">{ctaFiveText.heading}</h3>
+                <h3 className="cta-five_heading">{t.ctaFive.heading}</h3>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
                 {/* Subscribe Box */}
@@ -163,11 +116,11 @@ export default async function PricingPage({
                         type="email"
                         name="search-field"
                         defaultValue=""
-                        placeholder={ctaFiveText.emailPlaceholder}
+                        placeholder={t.ctaFive.emailPlaceholder}
                         required
                       />
                       <button type="submit" className="theme-btn submit-btn">
-                        {ctaFiveText.buttonText}
+                        {t.ctaFive.buttonText}
                       </button>
                     </div>
                   </form>

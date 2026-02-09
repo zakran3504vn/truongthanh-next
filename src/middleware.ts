@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { detectLocaleHybrid } from "@/lib/geo-locale";
 
 const locales = ["vi", "en"] as const;
 type Locale = (typeof locales)[number];
@@ -10,13 +11,23 @@ const ROUTE_MAP = {
   about: { vi: "/gioi-thieu", en: "/about-us" },
 } as const;
 
-function detectLocale(req: NextRequest): Locale {
-  const accept = (req.headers.get("accept-language") || "").toLowerCase();
-  if (accept.startsWith("en") || accept.includes(" en")) return "en";
-  return defaultLocale;
+/**
+ * Detect locale với thứ tự ưu tiên:
+ * 1. Cookie (người dùng đã chọn) - ƯU TIÊN CAO NHẤT
+ * 2. IP Geolocation (dựa trên vị trí địa lý)
+ * 3. Accept-Language (ngôn ngữ trình duyệt)
+ */
+async function detectLocale(req: NextRequest): Promise<Locale> {
+  try {
+    return await detectLocaleHybrid(req);
+  } catch (error) {
+    // Nếu có lỗi, fallback về default
+    console.error("Error in locale detection:", error);
+    return defaultLocale;
+  }
 }
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Bỏ qua các file .map (source maps) - không cần thiết, trả về 204 để tránh 404 spam
@@ -38,9 +49,9 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // "/" -> redirect theo ngôn ngữ trình duyệt
+  // "/" -> redirect theo Cookie > IP Geolocation > Accept-Language
   if (pathname === "/") {
-    const locale = detectLocale(req);
+    const locale = await detectLocale(req);
     const url = req.nextUrl.clone();
     url.pathname = `/${locale}`;
     return NextResponse.redirect(url);
@@ -51,7 +62,7 @@ export function middleware(req: NextRequest) {
     (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`)
   );
   if (!hasLocalePrefix) {
-    const locale = detectLocale(req);
+    const locale = await detectLocale(req);
     const url = req.nextUrl.clone();
     url.pathname = `/${locale}${pathname}`;
     return NextResponse.redirect(url);

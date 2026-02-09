@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 export default async function DichVuPage({
   params,
@@ -6,25 +7,12 @@ export default async function DichVuPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const safeLocale = locale === "en" ? "en" : "vi";
+  const safeLocale: Locale = locale === "en" ? "en" : "vi";
 
-  // Translations for page title section
-  const pageTitleTranslations = {
-    vi: {
-      title: "Dịch Vụ",
-      home: "Trang chủ",
-      breadcrumb: "Dịch Vụ",
-    },
-    en: {
-      title: "Services",
-      home: "Home",
-      breadcrumb: "Services",
-    },
-  };
+  // Lấy translations từ file tập trung
+  const t = getTranslations(safeLocale);
 
-  const pageTitleText = pageTitleTranslations[safeLocale];
-
-  // Services data with translations
+  // Services data
   const servicesData = [
     {
       id: 1,
@@ -64,37 +52,6 @@ export default async function DichVuPage({
     },
   ];
 
-  const servicesTranslations = {
-    vi: {
-      heading: "Giải Pháp Tối Ưu",
-      text: "Trái với quan niệm phổ biến, Lorem Ipsum không phải là văn bản ngẫu nhiên. Nó có nguồn gốc từ một tác phẩm",
-      readMore: "Đọc thêm",
-    },
-    en: {
-      heading: "Streamline Solutions",
-      text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece",
-      readMore: "Read More",
-    },
-  };
-
-  const servicesText = servicesTranslations[safeLocale];
-
-  // Translations for CTA Five section
-  const ctaFiveTranslations = {
-    vi: {
-      heading: "Đăng ký ngay để nhận thêm thông tin về chúng tôi",
-      emailPlaceholder: "Nhập email của bạn",
-      buttonText: "Đăng ký ngay",
-    },
-    en: {
-      heading: "Subscribe Now For More Information About Us",
-      emailPlaceholder: "Enter Your Email",
-      buttonText: "Subscribe Now",
-    },
-  };
-
-  const ctaFiveText = ctaFiveTranslations[safeLocale];
-
   return (
     <>
       {/* Start main-content */}
@@ -106,14 +63,14 @@ export default async function DichVuPage({
       >
         <div className="auto-container">
           <div className="title-outer d-sm-flex align-items-center justify-content-sm-between">
-            <h1 className="title">{pageTitleText.title}</h1>
+            <h1 className="title">{t.servicesPage.pageTitle.title}</h1>
             <ul className="page-breadcrumb">
               <li>
                 <Link href={safeLocale === "vi" ? "/vi" : "/en"}>
-                  {pageTitleText.home}
+                  {t.servicesPage.pageTitle.home}
                 </Link>
               </li>
-              <li>{pageTitleText.breadcrumb}</li>
+              <li>{t.servicesPage.pageTitle.breadcrumb}</li>
             </ul>
           </div>
         </div>
@@ -139,17 +96,17 @@ export default async function DichVuPage({
                   </div>
                   <h4 className="services-block_three-heading">
                     <Link href={`/${safeLocale}/services/service-details`}>
-                      {servicesText.heading}
+                      {t.servicesPage.services.heading}
                     </Link>
                   </h4>
                   <div className="services-block_three-text">
-                    {servicesText.text}
+                    {t.servicesPage.services.text}
                   </div>
                   <Link
                     className="services-block_three-more"
                     href={`/${safeLocale}/services/service-details`}
                   >
-                    {servicesText.readMore}
+                    {t.servicesPage.services.readMore}
                   </Link>
                 </div>
               </div>
@@ -174,7 +131,7 @@ export default async function DichVuPage({
             <span className="cta-five_color-two"></span>
             <div className="row clearfix">
               <div className="col-lg-6 col-md-12 col-sm-12">
-                <h3 className="cta-five_heading">{ctaFiveText.heading}</h3>
+                <h3 className="cta-five_heading">{t.ctaFive.heading}</h3>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
                 {/* Subscribe Box */}
@@ -189,11 +146,11 @@ export default async function DichVuPage({
                         type="email"
                         name="search-field"
                         defaultValue=""
-                        placeholder={ctaFiveText.emailPlaceholder}
+                        placeholder={t.ctaFive.emailPlaceholder}
                         required
                       />
                       <button type="submit" className="theme-btn submit-btn">
-                        {ctaFiveText.buttonText}
+                        {t.ctaFive.buttonText}
                       </button>
                     </div>
                   </form>

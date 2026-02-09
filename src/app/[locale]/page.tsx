@@ -1,4 +1,5 @@
 import FaqAccordion from "@/components/faq-accordion";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 export default async function LocaleHome({
   params,
@@ -6,28 +7,13 @@ export default async function LocaleHome({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const safeLocale = locale === "en" ? "en" : "vi";
+  const safeLocale: Locale = locale === "en" ? "en" : "vi";
 
-  const faqItems = [
-    {
-      id: 1,
-      title: "Why is SEO important for businesses?",
-      content:
-        "The generated is therefore always free from <br /> repetition is injected humour or words etc.",
-    },
-    {
-      id: 2,
-      title: "How long does results from SEO ?",
-      content:
-        "The generated is therefore always free from <br /> repetition is injected humour or words etc.",
-    },
-    {
-      id: 3,
-      title: "Can you guarante search engine rankings ?",
-      content:
-        "The generated is therefore always free from <br /> repetition is injected humour or words etc.",
-    },
-  ];
+  // Lấy translations từ file tập trung
+  const t = getTranslations(safeLocale);
+  const bannerText = t.home.banner;
+  const slides = bannerText.slides;
+
 
   return (
     <>
@@ -45,19 +31,15 @@ export default async function LocaleHome({
             </div>
             <div className="content-box">
               <h3>
-                About <span>TechCode</span>
+                {t.home.aboutSidebar.title} <span>{t.home.aboutSidebar.titleHighlight}</span>
               </h3>
               <div className="text">
-                Ut enim ad minim. facilisis suspendisseipsum dolor sit amet
-                dolore consectetur adipisicing elit sed do eiusmod tempor
-                incididunt ut labore et magna aliqua enim ad minim veniam,
-                quis nostrud.
+                {t.home.aboutSidebar.description}
               </div>
               <ul className="about-one_list">
-                <li>Keyword Research</li>
-                <li>On-page Optimization</li>
-                <li>Link Building</li>
-                <li>Page Optimization</li>
+                {t.home.aboutSidebar.services.map((service, index) => (
+                  <li key={index}>{service}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -84,11 +66,18 @@ export default async function LocaleHome({
                   <div className="slider-one_content-column col-lg-6 col-md-12 col-sm-12">
                     <div className="slider-one_content-inner">
                       <h1 className="slider-one_heading">
-                        Bringing Your <span>Business</span> to the Top
+                        {safeLocale === "vi" ? (
+                          <>
+                            {slides[0].heading} <span>{slides[0].headingHighlight}</span>
+                          </>
+                        ) : (
+                          <>
+                            {slides[0].heading} <span>{slides[0].headingHighlight}</span> to the Top
+                          </>
+                        )}
                       </h1>
                       <div className="slider-one_text">
-                        lorem ipsum dolor sit amet consectetur. Facilisi cursus
-                        vulputate vestibulum etiam rhoncus
+                        {slides[0].description}
                       </div>
                       <div className="slider-one_options">
                         <div className="slider-one_button d-flex align-items-center flex-wrap">
@@ -101,8 +90,8 @@ export default async function LocaleHome({
                             className="theme-btn btn-style-two"
                           >
                             <span className="btn-wrap">
-                              <span className="text-one">Explore More</span>
-                              <span className="text-two">Explore More</span>
+                              <span className="text-one">{bannerText.exploreButton}</span>
+                              <span className="text-two">{bannerText.exploreButton}</span>
                             </span>
                           </a>
                           <a
@@ -110,7 +99,7 @@ export default async function LocaleHome({
                             href="https://www.youtube.com/watch?v=cRXm1p-CNyk"
                           >
                             <i className="fa-solid fa-play"></i>
-                            <span>Play With Video</span>
+                            <span>{bannerText.playVideo}</span>
                           </a>
                         </div>
                       </div>
@@ -147,11 +136,18 @@ export default async function LocaleHome({
                   <div className="slider-one_content-column col-lg-6 col-md-12 col-sm-12">
                     <div className="slider-one_content-inner">
                       <h1 className="slider-one_heading">
-                        Bringing Your <span>Business</span> to the Top
+                        {safeLocale === "vi" ? (
+                          <>
+                            {slides[1].heading} <span>{slides[1].headingHighlight}</span>
+                          </>
+                        ) : (
+                          <>
+                            {slides[1].heading} <span>{slides[1].headingHighlight}</span> to the Top
+                          </>
+                        )}
                       </h1>
                       <div className="slider-one_text">
-                        lorem ipsum dolor sit amet consectetur. Facilisi cursus
-                        vulputate vestibulum etiam rhoncus
+                        {slides[1].description}
                       </div>
                       <div className="slider-one_options">
                         <div className="slider-one_button d-flex align-items-center flex-wrap">
@@ -164,8 +160,8 @@ export default async function LocaleHome({
                             className="theme-btn btn-style-two"
                           >
                             <span className="btn-wrap">
-                              <span className="text-one">Explore More</span>
-                              <span className="text-two">Explore More</span>
+                              <span className="text-one">{bannerText.exploreButton}</span>
+                              <span className="text-two">{bannerText.exploreButton}</span>
                             </span>
                           </a>
                           <a
@@ -173,7 +169,7 @@ export default async function LocaleHome({
                             href="https://www.youtube.com/watch?v=cRXm1p-CNyk"
                           >
                             <i className="fa-solid fa-play"></i>
-                            <span>Play With Video</span>
+                            <span>{bannerText.playVideo}</span>
                           </a>
                         </div>
                       </div>
@@ -209,11 +205,18 @@ export default async function LocaleHome({
                   <div className="slider-one_content-column col-lg-6 col-md-12 col-sm-12">
                     <div className="slider-one_content-inner">
                       <h1 className="slider-one_heading">
-                        Bringing Your <span>Business</span> to the Top
+                        {safeLocale === "vi" ? (
+                          <>
+                            {slides[2].heading} <span>{slides[2].headingHighlight}</span>
+                          </>
+                        ) : (
+                          <>
+                            {slides[2].heading} <span>{slides[2].headingHighlight}</span> to the Top
+                          </>
+                        )}
                       </h1>
                       <div className="slider-one_text">
-                        lorem ipsum dolor sit amet consectetur. Facilisi cursus
-                        vulputate vestibulum etiam rhoncus
+                        {slides[2].description}
                       </div>
                       <div className="slider-one_options">
                         <div className="slider-one_button d-flex align-items-center flex-wrap">
@@ -226,8 +229,8 @@ export default async function LocaleHome({
                             className="theme-btn btn-style-two"
                           >
                             <span className="btn-wrap">
-                              <span className="text-one">Explore More</span>
-                              <span className="text-two">Explore More</span>
+                              <span className="text-one">{bannerText.exploreButton}</span>
+                              <span className="text-two">{bannerText.exploreButton}</span>
                             </span>
                           </a>
                           <a
@@ -235,7 +238,7 @@ export default async function LocaleHome({
                             href="https://www.youtube.com/watch?v=cRXm1p-CNyk"
                           >
                             <i className="fa-solid fa-play"></i>
-                            <span>Play With Video</span>
+                            <span>{bannerText.playVideo}</span>
                           </a>
                         </div>
                       </div>
@@ -274,69 +277,42 @@ export default async function LocaleHome({
           {/* Sec Title */}
           <div className="sec-title title-anim centered">
             <h2 className="sec-title_heading">
-              Drive more traffic with <span>effective</span> <br /> SEO strategies
+              {t.home.servicesSection.heading} <span>{t.home.servicesSection.headingHighlight}</span>
+              {t.home.servicesSection.headingSuffix?.trim() ? (
+                <>
+                  <br /> {t.home.servicesSection.headingSuffix}
+                </>
+              ) : null}
             </h2>
           </div>
           <div className="row clearfix">
-            {/* Service Block One */}
-            <div className="services-block_one col-lg-4 col-sm-6">
-              <div
-                className="services-block_one-inner wow fadeInLeft"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="services-block_one-icon">
-                  <img src="/images/icons/service-1.svg" alt="" />
+            {t.home.servicesSection.services.map((service, index) => {
+              const animations = ["fadeInLeft", "fadeInUp", "fadeInRight"];
+              const icons = [
+                "/images/icons/service-1.svg",
+                "/images/icons/service-2.svg",
+                "/images/icons/service-3.svg",
+              ];
+              return (
+                <div key={index} className="services-block_one col-lg-4 col-sm-6">
+                  <div
+                    className={`services-block_one-inner wow ${animations[index]}`}
+                    data-wow-delay="0ms"
+                    data-wow-duration="1500ms"
+                  >
+                    <div className="services-block_one-icon">
+                      <img src={icons[index]} alt="" />
+                    </div>
+                    <h4 className="services-block_one-heading">
+                      <a href="page-service-details.html">{service.title}</a>
+                    </h4>
+                    <div className="services-block_one-text">
+                      {service.description}
+                    </div>
+                  </div>
                 </div>
-                <h4 className="services-block_one-heading">
-                  <a href="page-service-details.html">Keyword Research</a>
-                </h4>
-                <div className="services-block_one-text">
-                  Loremi Ipsum is simply dummy isn text inmi of Ihe printing
-                  apesetting mdesigner industrn norem
-                </div>
-              </div>
-            </div>
-
-            {/* Service Block One */}
-            <div className="services-block_one col-lg-4 col-sm-6">
-              <div
-                className="services-block_one-inner wow fadeInUp"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="services-block_one-icon">
-                  <img src="/images/icons/service-2.svg" alt="" />
-                </div>
-                <h4 className="services-block_one-heading">
-                  <a href="page-service-details.html">On-page Optimization</a>
-                </h4>
-                <div className="services-block_one-text">
-                  Loremi Ipsum is simply dummy isn text inmi of Ihe printing
-                  apesetting mdesigner industrn norem
-                </div>
-              </div>
-            </div>
-
-            {/* Service Block One */}
-            <div className="services-block_one col-lg-4 col-sm-6">
-              <div
-                className="services-block_one-inner wow fadeInRight"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="services-block_one-icon">
-                  <img src="/images/icons/service-3.svg" alt="" />
-                </div>
-                <h4 className="services-block_one-heading">
-                  <a href="page-service-details.html">Link Building</a>
-                </h4>
-                <div className="services-block_one-text">
-                  Loremi Ipsum is simply dummy isn text inmi of Ihe printing
-                  apesetting mdesigner industrn norem
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -361,25 +337,21 @@ export default async function LocaleHome({
                 {/* Sec Title */}
                 <div className="sec-title tx-split-text split-in-right">
                   <h2 className="sec-title_heading">
-                    Elevating your <span>online</span> presence
+                    {t.home.aboutSection.heading} <span>{t.home.aboutSection.headingHighlight}</span>
+                    {t.home.aboutSection.headingSuffix?.trim() ? ` ${t.home.aboutSection.headingSuffix}` : null}
                   </h2>
                   <div className="sec-title_text">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry Lorem Ipsum has been the industry&apos;s
-                    standard{" "}
+                    {t.home.aboutSection.description}
                   </div>
                 </div>
                 <ul className="about-one_numbering">
-                  <li>
-                    <span>01</span>
-                    <h5>Unlocking the power of SEO</h5>
-                    Ipsum has been the industry <br /> standard dummy
-                  </li>
-                  <li>
-                    <span>02</span>
-                    <h5>The key to successful search</h5>
-                    Ipsum has been the industry <br /> standard dummy
-                  </li>
+                  {t.home.aboutSection.items.map((item, index) => (
+                    <li key={index}>
+                      <span>0{index + 1}</span>
+                      <h5>{item.title}</h5>
+                      {item.description}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -394,7 +366,8 @@ export default async function LocaleHome({
           {/* Sec Title */}
           <div className="sec-title centered">
             <h2 className="sec-title_heading tx-split-text split-in-up">
-              Improve your search engine <br /> <span>ranking</span> with us
+              {t.home.teamSection.heading} <br /> <span>{t.home.teamSection.headingHighlight}</span>
+              {t.home.teamSection.headingSuffix?.trim() ? ` ${t.home.teamSection.headingSuffix}` : null}
             </h2>
           </div>
           <div className="row clearfix">
@@ -422,7 +395,7 @@ export default async function LocaleHome({
                     <a href="page-team-details.html">Cameron Williamson</a>
                   </h5>
                   <div className="team-block_one-designation">
-                    Software Developer
+                    {t.home.teamSection.designations.softwareDeveloper}
                   </div>
                 </div>
               </div>
@@ -451,7 +424,7 @@ export default async function LocaleHome({
                   <h5 className="team-block_one-heading">
                     <a href="page-team-details.html">Theresa Webb</a>
                   </h5>
-                  <div className="team-block_one-designation">ui/ux Designer </div>
+                  <div className="team-block_one-designation">{t.home.teamSection.designations.uiUxDesigner}</div>
                 </div>
               </div>
             </div>
@@ -480,7 +453,7 @@ export default async function LocaleHome({
                     <a href="page-team-details.html">Jerome Bell</a>
                   </h5>
                   <div className="team-block_one-designation">
-                    Software Developer
+                    {t.home.teamSection.designations.softwareDeveloper}
                   </div>
                 </div>
               </div>
@@ -496,7 +469,8 @@ export default async function LocaleHome({
           {/* Sec Title */}
           <div className="sec-title centered">
             <h2 className="sec-title_heading tx-split-text split-in-up">
-              Improve your search engine <br /> <span>ranking</span> with us
+              {t.home.teamSection.heading} <br /> <span>{t.home.teamSection.headingHighlight}</span>
+              {t.home.teamSection.headingSuffix?.trim() ? ` ${t.home.teamSection.headingSuffix}` : null}
             </h2>
           </div>
           <div className="row clearfix">
@@ -512,16 +486,15 @@ export default async function LocaleHome({
                 {/* Sec Title */}
                 <div className="sec-title">
                   <h2 className="sec-title_heading">
-                    SEO that gets <span>results</span>
+                    {t.home.faqSection.heading} <span>{t.home.faqSection.headingHighlight}</span>
                   </h2>
                   <div className="sec-title_text">
-                    It is a long established fact that a reader will be distracted
-                    by the readable content of a page when looking at its layout
+                    {t.home.faqSection.description}
                   </div>
                 </div>
 
                 {/* Accordion Box */}
-                <FaqAccordion items={faqItems} defaultActive={1} />
+                <FaqAccordion items={t.home.faqSection.items} defaultActive={1} />
               </div>
             </div>
           </div>
@@ -535,90 +508,45 @@ export default async function LocaleHome({
           {/* Sec Title */}
           <div className="sec-title d-flex justify-content-between align-items-center flex-wrap">
             <h2 className="sec-title_heading">
-              Experience the <span>power</span> <br /> effective SEO with
+              {t.home.workSection.heading} <span>{t.home.workSection.headingHighlight}</span>
+              {t.home.workSection.headingSuffix?.trim() ? (
+                <>
+                  <br /> {t.home.workSection.headingSuffix}
+                </>
+              ) : null}
             </h2>
             <div className="sec-title_text">
-              Loremi Ipsum is simply dummy text inmi of Ihe printing design <br />{" "}
-              apesetting mdesigner industrn norem our us Many desktop <br />{" "}
-              publishing packages web page editors ipsum
+              {t.home.workSection.description}
             </div>
           </div>
           <div className="row clearfix">
-            {/* Work Block One */}
-            <div className="work-block_one col-lg-3 col-sm-6">
-              <div
-                className="work-block_one-inner wow fadeInLeft"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="work-block_one-icon">
-                  <img src="/images/icons/work-1.svg" alt="" />
-                  <span className="work-block_one-number">01</span>
+            {t.home.workSection.items.map((item, index) => {
+              const delays = ["0ms", "150ms", "300ms", "450ms"];
+              const icons = [
+                "/images/icons/work-1.svg",
+                "/images/icons/work-2.svg",
+                "/images/icons/work-3.svg",
+                "/images/icons/work-4.svg",
+              ];
+              return (
+                <div key={index} className="work-block_one col-lg-3 col-sm-6">
+                  <div
+                    className="work-block_one-inner wow fadeInLeft"
+                    data-wow-delay={delays[index]}
+                    data-wow-duration="1500ms"
+                  >
+                    <div className="work-block_one-icon">
+                      <img src={icons[index]} alt="" />
+                      <span className="work-block_one-number">0{index + 1}</span>
+                    </div>
+                    <h5 className="work-block_one-heading">{item.title}</h5>
+                    <div className="work-block_one-text">
+                      {item.description}
+                    </div>
+                  </div>
                 </div>
-                <h5 className="work-block_one-heading">Keyword Research</h5>
-                <div className="work-block_one-text">
-                  Lorem Ipsum isn simply dummy texts of the printing apesi etting
-                  industry Lorem Ipsum
-                </div>
-              </div>
-            </div>
-
-            {/* Work Block One */}
-            <div className="work-block_one col-lg-3 col-sm-6">
-              <div
-                className="work-block_one-inner wow fadeInLeft"
-                data-wow-delay="150ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="work-block_one-icon">
-                  <img src="/images/icons/work-2.svg" alt="" />
-                  <span className="work-block_one-number">02</span>
-                </div>
-                <h5 className="work-block_one-heading">Page Optimization</h5>
-                <div className="work-block_one-text">
-                  Lorem Ipsum isn simply dummy texts of the printing apesi etting
-                  industry Lorem Ipsum
-                </div>
-              </div>
-            </div>
-
-            {/* Work Block One */}
-            <div className="work-block_one col-lg-3 col-sm-6">
-              <div
-                className="work-block_one-inner wow fadeInLeft"
-                data-wow-delay="300ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="work-block_one-icon">
-                  <img src="/images/icons/work-3.svg" alt="" />
-                  <span className="work-block_one-number">03</span>
-                </div>
-                <h5 className="work-block_one-heading">Link Building</h5>
-                <div className="work-block_one-text">
-                  Lorem Ipsum isn simply dummy texts of the printing apesi etting
-                  industry Lorem Ipsum
-                </div>
-              </div>
-            </div>
-
-            {/* Work Block One */}
-            <div className="work-block_one col-lg-3 col-sm-6">
-              <div
-                className="work-block_one-inner wow fadeInLeft"
-                data-wow-delay="450ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="work-block_one-icon">
-                  <img src="/images/icons/work-4.svg" alt="" />
-                  <span className="work-block_one-number">04</span>
-                </div>
-                <h5 className="work-block_one-heading">Technical SEO</h5>
-                <div className="work-block_one-text">
-                  Lorem Ipsum isn simply dummy texts of the printing apesi etting
-                  industry Lorem Ipsum
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -638,11 +566,11 @@ export default async function LocaleHome({
           {/* Sec Title */}
           <div className="sec-title light centered">
             <h2 className="sec-title_heading">
-              Manage Your <span>Finance</span> & Save Time
+              {t.home.ctaOne.heading} <span>{t.home.ctaOne.headingHighlight}</span>
+              {t.home.ctaOne.headingSuffix?.trim() ? ` ${t.home.ctaOne.headingSuffix}` : null}
             </h2>
             <div className="sec-title_text">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a <br /> page when looking at its layout.
+              {t.home.ctaOne.description}
             </div>
           </div>
 
@@ -656,11 +584,11 @@ export default async function LocaleHome({
                 <input
                   type="email"
                   name="search-field"
-                  placeholder="Enter Your Email"
+                  placeholder={t.home.ctaOne.emailPlaceholder}
                   required
                 />
                 <button type="submit" className="theme-btn submit-btn">
-                  Try for Free
+                  {t.home.ctaOne.buttonText}
                 </button>
               </div>
             </form>
@@ -675,7 +603,12 @@ export default async function LocaleHome({
           {/* Sec Title */}
           <div className="sec-title centered">
             <h2 className="sec-title_heading tx-split-text split-in-up">
-              Improve your search <span>engine</span> <br /> ranking with us
+              {t.home.testimonialSection.heading} <span>{t.home.testimonialSection.headingHighlight}</span>
+              {t.home.testimonialSection.headingSuffix?.trim() ? (
+                <>
+                  <br /> {t.home.testimonialSection.headingSuffix}
+                </>
+              ) : null}
             </h2>
           </div>
           <div className="testimonial-carousel swiper-container">
@@ -703,10 +636,7 @@ export default async function LocaleHome({
                       </span>
                     </div>
                     <div className="testimonial-block_one-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting imn industry Lorem Ipsum has been the
-                      industry&apos;s Lorem Ipsum is simplmi dummy text of the
-                      printing and typesetting industry
+                      {t.home.testimonialSection.testimonialText}
                     </div>
                   </div>
                 </div>
@@ -735,10 +665,7 @@ export default async function LocaleHome({
                       </span>
                     </div>
                     <div className="testimonial-block_one-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting imn industry Lorem Ipsum has been the
-                      industry&apos;s Lorem Ipsum is simplmi dummy text of the
-                      printing and typesetting industry
+                      {t.home.testimonialSection.testimonialText}
                     </div>
                   </div>
                 </div>
@@ -767,10 +694,7 @@ export default async function LocaleHome({
                       </span>
                     </div>
                     <div className="testimonial-block_one-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting imn industry Lorem Ipsum has been the
-                      industry&apos;s Lorem Ipsum is simplmi dummy text of the
-                      printing and typesetting industry
+                      {t.home.testimonialSection.testimonialText}
                     </div>
                   </div>
                 </div>
@@ -799,10 +723,7 @@ export default async function LocaleHome({
                       </span>
                     </div>
                     <div className="testimonial-block_one-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting imn industry Lorem Ipsum has been the
-                      industry&apos;s Lorem Ipsum is simplmi dummy text of the
-                      printing and typesetting industry
+                      {t.home.testimonialSection.testimonialText}
                     </div>
                   </div>
                 </div>

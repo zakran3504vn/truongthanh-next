@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 export default async function NewsPage({
   params,
@@ -6,25 +7,12 @@ export default async function NewsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const safeLocale = locale === "en" ? "en" : "vi";
+  const safeLocale: Locale = locale === "en" ? "en" : "vi";
 
-  // Translations for page title section
-  const pageTitleTranslations = {
-    vi: {
-      title: "Tin Tức",
-      home: "Trang chủ",
-      breadcrumb: "Tin Tức",
-    },
-    en: {
-      title: "News Grid",
-      home: "Home",
-      breadcrumb: "News",
-    },
-  };
+  // Lấy translations từ file tập trung
+  const t = getTranslations(safeLocale);
 
-  const pageTitleText = pageTitleTranslations[safeLocale];
-
-  // News data with translations
+  // News data
   const newsData = [
     {
       id: 1,
@@ -70,55 +58,6 @@ export default async function NewsPage({
     },
   ];
 
-  const newsTranslations = {
-    vi: {
-      admin: "quản trị viên",
-      comments: "Bình luận",
-      readMore: "Đọc thêm",
-      titles: [
-        "Tìm thấy, nhấp chuột và đạt kết quả với giải pháp SEO của chúng tôi",
-        "Tăng cường sự hiện diện trực tuyến của bạn với sức mạnh của SEO",
-        "Công cụ tìm kiếm yêu thích chúng tôi và khách hàng của bạn cũng vậy",
-        "Công cụ tìm kiếm yêu thích chúng tôi và khách hàng của bạn cũng vậy",
-        "Tăng cường sự hiện diện trực tuyến của bạn với sức mạnh của SEO",
-        "Tìm thấy, nhấp chuột và đạt kết quả với giải pháp SEO của chúng tôi",
-      ],
-      text: "Triển khai bất kỳ hệ thống thanh toán nào cho đăng ký của bạn",
-    },
-    en: {
-      admin: "admin",
-      comments: "Comments",
-      readMore: "Read More",
-      titles: [
-        "Get found get clicked get results with our SEO solutions",
-        "Boost your online presence with the magic of SEO",
-        "Search engines love us and so will your customers",
-        "Search engines love us and so will your customers",
-        "Boost your online presence with the magic of SEO",
-        "Get found get clicked get results with our SEO solutions",
-      ],
-      text: "Implementing any payment system for yourscription loren",
-    },
-  };
-
-  const newsText = newsTranslations[safeLocale];
-
-  // Translations for CTA Five section
-  const ctaFiveTranslations = {
-    vi: {
-      heading: "Đăng ký ngay để nhận thêm thông tin về chúng tôi",
-      emailPlaceholder: "Nhập email của bạn",
-      buttonText: "Đăng ký ngay",
-    },
-    en: {
-      heading: "Subscribe Now For More Information About Us",
-      emailPlaceholder: "Enter Your Email",
-      buttonText: "Subscribe Now",
-    },
-  };
-
-  const ctaFiveText = ctaFiveTranslations[safeLocale];
-
   return (
     <>
       {/* Start main-content */}
@@ -130,14 +69,14 @@ export default async function NewsPage({
       >
         <div className="auto-container">
           <div className="title-outer d-sm-flex align-items-center justify-content-sm-between">
-            <h1 className="title">{pageTitleText.title}</h1>
+            <h1 className="title">{t.news.pageTitle.title}</h1>
             <ul className="page-breadcrumb">
               <li>
                 <Link href={safeLocale === "vi" ? "/vi" : "/en"}>
-                  {pageTitleText.home}
+                  {t.news.pageTitle.home}
                 </Link>
               </li>
-              <li>{pageTitleText.breadcrumb}</li>
+              <li>{t.news.pageTitle.breadcrumb}</li>
             </ul>
           </div>
         </div>
@@ -168,26 +107,26 @@ export default async function NewsPage({
                     <ul className="news-block_three-meta">
                       <li>
                         <span className="icon flaticon-user-1"></span>
-                        {newsText.admin}
+                        {t.news.news.admin}
                       </li>
                       <li>
                         <span className="icon flaticon-chat"></span>
-                        {newsText.comments} (05)
+                        {t.news.news.comments} (05)
                       </li>
                     </ul>
                     <h5 className="news-block_three-heading">
                       <Link href={`/${safeLocale}/news/news-details`}>
-                        {newsText.titles[index]}
+                        {t.news.news.titles[index]}
                       </Link>
                     </h5>
                     <div className="news-block_three-text">
-                      {newsText.text}
+                      {t.news.news.text}
                     </div>
                     <Link
                       className="news-block_three-more"
                       href={`/${safeLocale}/news/news-details`}
                     >
-                      {newsText.readMore}
+                      {t.news.news.readMore}
                     </Link>
                   </div>
                 </div>
@@ -213,7 +152,7 @@ export default async function NewsPage({
             <span className="cta-five_color-two"></span>
             <div className="row clearfix">
               <div className="col-lg-6 col-md-12 col-sm-12">
-                <h3 className="cta-five_heading">{ctaFiveText.heading}</h3>
+                <h3 className="cta-five_heading">{t.ctaFive.heading}</h3>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
                 {/* Subscribe Box */}
@@ -228,11 +167,11 @@ export default async function NewsPage({
                         type="email"
                         name="search-field"
                         defaultValue=""
-                        placeholder={ctaFiveText.emailPlaceholder}
+                        placeholder={t.ctaFive.emailPlaceholder}
                         required
                       />
                       <button type="submit" className="theme-btn submit-btn">
-                        {ctaFiveText.buttonText}
+                        {t.ctaFive.buttonText}
                       </button>
                     </div>
                   </form>

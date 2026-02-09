@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FaqAccordionTwo from "@/components/faq-accordion-two";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 export default async function GioiThieuPage({
   params,
@@ -7,42 +8,29 @@ export default async function GioiThieuPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const safeLocale = locale === "en" ? "en" : "vi";
+  const safeLocale: Locale = locale === "en" ? "en" : "vi";
 
-  // Translations for CTA Five section
-  const ctaFiveTranslations = {
-    vi: {
-      heading: "Đăng ký ngay để nhận thêm thông tin về chúng tôi",
-      emailPlaceholder: "Nhập email của bạn",
-      buttonText: "Đăng ký ngay",
-    },
-    en: {
-      heading: "Subscribe Now For More Information About Us",
-      emailPlaceholder: "Enter Your Email",
-      buttonText: "Subscribe Now",
-    },
-  };
-
-  const ctaFiveText = ctaFiveTranslations[safeLocale];
+  // Lấy translations từ file tập trung
+  const t = getTranslations(safeLocale);
 
   const faqFourItemsVi = [
     {
       id: 1,
       title: "Những dịch vụ IT phổ biến là gì?",
       content:
-        "Common IT services include network security, software development, data analysis",
+        "Các dịch vụ IT phổ biến bao gồm bảo mật mạng, phát triển phần mềm, phân tích dữ liệu và dịch vụ hạ tầng đám mây.",
     },
     {
       id: 2,
       title: "Công nghệ này phục vụ cho ai?",
       content:
-        "Common IT services include network security, software development, data analysis",
+        "Các giải pháp công nghệ phù hợp cho mọi loại hình doanh nghiệp, từ startup, SME đến các tập đoàn lớn đang muốn tối ưu hoá vận hành.",
     },
     {
       id: 3,
       title: "Đưa thế giới lên tầm cao mới?",
       content:
-        "Common IT services include network security, software development, data analysis",
+        "Công nghệ hiện đại giúp doanh nghiệp kết nối khách hàng trên toàn cầu, tự động hoá quy trình và tạo ra giá trị mới trong kỷ nguyên số.",
     },
   ];
 
@@ -60,9 +48,11 @@ export default async function GioiThieuPage({
             <h1 className="title">Giới Thiệu</h1>
             <ul className="page-breadcrumb">
               <li>
-                <Link href={safeLocale === "vi" ? "/vi" : "/en"}>Home</Link>
+                <Link href={safeLocale === "vi" ? "/vi" : "/en"}>
+                  {t.aboutPage.pageTitle.home}
+                </Link>
               </li>
-              <li>Giới Thiệu</li>
+              <li>{t.aboutPage.pageTitle.breadcrumb}</li>
             </ul>
           </div>
         </div>
@@ -118,9 +108,9 @@ export default async function GioiThieuPage({
                     Nơi Sáng Tạo Gặp Gỡ Công Nghệ
                   </h2>
                   <div className="sec-title_text">
-                    Lorem ipsum dolor sit amet consectetur. Gravida vulputate vel
-                    nec nisi sit nunc. Hendrerit sagittis donec eleifend ipsum
-                    quam. A ghjkj lectus sit enim cursus euismod urna.
+                    Chúng tôi là đội ngũ chuyên gia công nghệ luôn tìm kiếm những
+                    giải pháp sáng tạo, giúp doanh nghiệp tối ưu hoá hoạt động,
+                    nâng cao trải nghiệm khách hàng và tăng trưởng bền vững.
                   </div>
                 </div>
                 <ul className="about-five_list">
@@ -147,8 +137,8 @@ export default async function GioiThieuPage({
             Đạt được mục tiêu với lợi thế cạnh tranh?
           </h2>
           <div className="cta-six_text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Hãy để chúng tôi đồng hành cùng bạn trong hành trình chuyển đổi số
+            và xây dựng lợi thế cạnh tranh vượt trội trên thị trường.
           </div>
           <div className="cta-six-buttons">
             <a href="page-contact.html" className="theme-btn btn-style-three">
@@ -180,8 +170,9 @@ export default async function GioiThieuPage({
               Đổi mới tương lai
             </h2>
             <div className="sec-title_text tx-split-text split-in-up">
-              Lorem ipsum dolor sit amet consectetur. Dui enim tellus <br />
-              dignissim in a amet.
+              Quy trình làm việc của chúng tôi được thiết kế rõ ràng, minh bạch
+              và linh hoạt, đảm bảo mỗi dự án đều được triển khai hiệu quả từ
+              giai đoạn phân tích đến bàn giao sản phẩm.
             </div>
           </div>
           <div className="row clearfix">
@@ -325,7 +316,7 @@ export default async function GioiThieuPage({
             <span className="cta-five_color-two"></span>
             <div className="row clearfix">
               <div className="col-lg-6 col-md-12 col-sm-12">
-                <h3 className="cta-five_heading">{ctaFiveText.heading}</h3>
+                <h3 className="cta-five_heading">{t.ctaFive.heading}</h3>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
                 {/* Subscribe Box */}
@@ -340,11 +331,11 @@ export default async function GioiThieuPage({
                         type="email"
                         name="search-field"
                         defaultValue=""
-                        placeholder={ctaFiveText.emailPlaceholder}
+                        placeholder={t.ctaFive.emailPlaceholder}
                         required
                       />
                       <button type="submit" className="theme-btn submit-btn">
-                        {ctaFiveText.buttonText}
+                        {t.ctaFive.buttonText}
                       </button>
                     </div>
                   </form>

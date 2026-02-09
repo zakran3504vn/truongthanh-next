@@ -1,6 +1,7 @@
 import Link from "next/link";
-
-type Locale = "vi" | "en";
+import { LanguageSwitcher } from "./language-switcher";
+import { HomeLink } from "./home-link";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 function links(locale: Locale) {
   return {
@@ -15,6 +16,7 @@ function links(locale: Locale) {
 
 export function SiteHeader({ locale }: { locale: Locale }) {
   const l = links(locale);
+  const t = getTranslations(locale);
 
   return (
     <header className="main-header header-style-one">
@@ -24,9 +26,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             <div className="d-flex justify-content-between align-items-center flex-wrap">
               <div className="logo-box">
                 <div className="logo">
-                  <Link href={l.home}>
+                  <HomeLink href={l.home}>
                     <img src="/images/logo.svg" alt="" title="" />
-                  </Link>
+                  </HomeLink>
                 </div>
               </div>
 
@@ -54,22 +56,22 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                   >
                     <ul className="navigation clearfix">
                       <li>
-                        <Link href={l.home}>Home</Link>
+                        <HomeLink href={l.home}>{t.common.home}</HomeLink>
                       </li>
                       <li>
-                        <Link href={l.about}>About Us</Link>
+                        <Link href={l.about}>{t.common.about}</Link>
                       </li>
                       <li>
-                        <Link href={l.services}>Services</Link>
+                        <Link href={l.services}>{t.common.services}</Link>
                       </li>
                       <li>
-                        <Link href={l.pricing}>Pricing</Link>
+                        <Link href={l.pricing}>{t.common.pricing}</Link>
                       </li>
                       <li>
-                        <Link href={l.news}>News</Link>
+                        <Link href={l.news}>{t.common.news}</Link>
                       </li>
                       <li>
-                        <Link href={l.contact}>Contact</Link>
+                        <Link href={l.contact}>{t.common.contact}</Link>
                       </li>
                     </ul>
                   </div>
@@ -83,6 +85,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                   <a href="#" className="fa-brands fa-instagram"></a>
                   <a href="#" className="fa-brands fa-youtube"></a>
                 </div>
+
+                {/* Language Switcher */}
+                <LanguageSwitcher currentLocale={locale} />
 
                 <span className="hamburger">
                   <span className="top-bun"></span>
@@ -107,9 +112,9 @@ export function SiteHeader({ locale }: { locale: Locale }) {
 
         <nav className="menu-box">
           <div className="nav-logo">
-            <Link href={l.home}>
+            <HomeLink href={l.home}>
               <img src="/images/logo.svg" alt="" title="" />
-            </Link>
+            </HomeLink>
           </div>
           <div className="menu-outer">{/* populated by legacy script */}</div>
         </nav>

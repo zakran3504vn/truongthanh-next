@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FaqAccordionTwo from "@/components/faq-accordion-two";
+import { getTranslations, type Locale } from "@/lib/translations";
 
 export default async function AboutUsPage({
   params,
@@ -7,23 +8,10 @@ export default async function AboutUsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const safeLocale = locale === "en" ? "en" : "vi";
+  const safeLocale: Locale = locale === "en" ? "en" : "vi";
 
-  // Translations for CTA Five section
-  const ctaFiveTranslations = {
-    vi: {
-      heading: "Đăng ký ngay để nhận thêm thông tin về chúng tôi",
-      emailPlaceholder: "Nhập email của bạn",
-      buttonText: "Đăng ký ngay",
-    },
-    en: {
-      heading: "Subscribe Now For More Information About Us",
-      emailPlaceholder: "Enter Your Email",
-      buttonText: "Subscribe Now",
-    },
-  };
-
-  const ctaFiveText = ctaFiveTranslations[safeLocale];
+  // Lấy translations từ file tập trung
+  const t = getTranslations(safeLocale);
 
   const faqFourItems = [
     {
@@ -323,7 +311,7 @@ export default async function AboutUsPage({
             <span className="cta-five_color-two"></span>
             <div className="row clearfix">
               <div className="col-lg-6 col-md-12 col-sm-12">
-                <h3 className="cta-five_heading">{ctaFiveText.heading}</h3>
+                <h3 className="cta-five_heading">{t.ctaFive.heading}</h3>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
                 {/* Subscribe Box */}
@@ -338,11 +326,11 @@ export default async function AboutUsPage({
                         type="email"
                         name="search-field"
                         defaultValue=""
-                        placeholder={ctaFiveText.emailPlaceholder}
+                        placeholder={t.ctaFive.emailPlaceholder}
                         required
                       />
                       <button type="submit" className="theme-btn submit-btn">
-                        {ctaFiveText.buttonText}
+                        {t.ctaFive.buttonText}
                       </button>
                     </div>
                   </form>

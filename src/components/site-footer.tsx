@@ -1,4 +1,8 @@
-export function SiteFooter() {
+import { getTranslations, type Locale } from "@/lib/translations";
+
+export function SiteFooter({ locale }: { locale: Locale }) {
+  const t = getTranslations(locale);
+  
   // dùng đúng markup footer gốc để CSS ăn chuẩn
   return (
     <footer
@@ -42,23 +46,13 @@ export function SiteFooter() {
 
                 <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                   <div className="footer-widget links-widget">
-                    <h4 className="main-footer_title">Our Services</h4>
+                    <h4 className="main-footer_title">{t.footer.ourServices}</h4>
                     <ul className="footer-list">
-                      <li>
-                        <a href="#">Smart Thinking</a>
-                      </li>
-                      <li>
-                        <a href="#">Business Growth Planning</a>
-                      </li>
-                      <li>
-                        <a href="#">Perfect Business Solutions</a>
-                      </li>
-                      <li>
-                        <a href="#">Digital Marketing</a>
-                      </li>
-                      <li>
-                        <a href="#">UI/UX Designing</a>
-                      </li>
+                      {t.footer.services.map((service, index) => (
+                        <li key={index}>
+                          <a href="#">{service}</a>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -69,38 +63,25 @@ export function SiteFooter() {
               <div className="row clearfix">
                 <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                   <div className="footer-widget links-widget">
-                    <h4 className="main-footer_title">Useful Links</h4>
+                    <h4 className="main-footer_title">{t.footer.usefulLinks}</h4>
                     <ul className="footer-list">
-                      <li>
-                        <a href="#">About Us</a>
-                      </li>
-                      <li>
-                        <a href="#">Services</a>
-                      </li>
-                      <li>
-                        <a href="#">Work Process</a>
-                      </li>
-                      <li>
-                        <a href="#">Testimonial</a>
-                      </li>
-                      <li>
-                        <a href="#">Portfolio</a>
-                      </li>
+                      {t.footer.links.map((link, index) => (
+                        <li key={index}>
+                          <a href="#">{link}</a>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
 
                 <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                   <div className="footer-widget post-widget">
-                    <h4 className="main-footer_title">Recent Post</h4>
-                    <div className="post-widget_content">
-                      <a href="#">Efficiency redefined through technology</a>{" "}
-                      <span>October 19, 2022</span>
-                    </div>
-                    <div className="post-widget_content">
-                      <a href="#">Efficiency redefined through technology</a>{" "}
-                      <span>October 19, 2022</span>
-                    </div>
+                    <h4 className="main-footer_title">{t.footer.recentPost}</h4>
+                    {t.footer.posts.map((post, index) => (
+                      <div key={index} className="post-widget_content">
+                        <a href="#">{post.title}</a> <span>{post.date}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -109,8 +90,8 @@ export function SiteFooter() {
         </div>
 
         <div className="footer-newsletter">
-          <div className="d-flex justify-content-between align-items-center flex-wrap">
-            <h3>Subscribe Our Newsletter</h3>
+          <div className="d-flex justify-content-between align-items-center flex-wrap gap-4">
+            <h3>{t.footer.subscribeHeading}</h3>
             <div className="subscribe-box">
               <form method="post" action="#">
                 <div className="form-group">
@@ -118,11 +99,11 @@ export function SiteFooter() {
                     type="email"
                     name="search-field"
                     defaultValue=""
-                    placeholder="Your E-mail address"
+                    placeholder={t.footer.emailPlaceholder}
                     required
                   />
                   <button type="submit" className="theme-btn submit-btn">
-                    Subscribe
+                    {t.footer.subscribeButton}
                   </button>
                 </div>
               </form>
@@ -133,18 +114,14 @@ export function SiteFooter() {
         <div className="footer-bottom">
           <div className="d-flex justify-content-between align-items-center flex-wrap">
             <div className="copyright">
-              &copy; copyrights reserved by kodesolution
+              {t.footer.copyright}
             </div>
             <ul className="footer-bottom-nav">
-              <li>
-                <a href="#">Trams &amp; Condition</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
+              {t.footer.footerLinks.map((link, index) => (
+                <li key={index}>
+                  <a href="#">{link}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

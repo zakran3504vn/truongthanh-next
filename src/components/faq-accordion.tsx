@@ -1,6 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+
+// Accordion React thuần:
+// - Điều khiển open/close bằng state
+// - Dùng CSS max-height cố định để animate
+// - Ngăn script jQuery legacy bắt sự kiện (stopPropagation)
 
 interface AccordionItem {
   id: number;
@@ -18,44 +23,13 @@ export default function FaqAccordion({
   defaultActive = 1,
 }: FaqAccordionProps) {
   const [activeId, setActiveId] = useState<number>(defaultActive);
-  const contentRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
 
   const handleToggle = (id: number) => {
-    if (activeId === id) {
-      // Nếu đang mở thì đóng lại
-      setActiveId(0);
-    } else {
-      // Mở accordion mới
-      setActiveId(id);
-    }
+    setActiveId((prev) => (prev === id ? 0 : id));
   };
 
-  useEffect(() => {
-    // Cập nhật maxHeight khi activeId thay đổi
-    items.forEach((item) => {
-      const contentEl = contentRefs.current[item.id];
-      if (contentEl) {
-        if (activeId === item.id) {
-          contentEl.style.maxHeight = contentEl.scrollHeight + "px";
-        } else {
-          contentEl.style.maxHeight = "0px";
-        }
-      }
-    });
-  }, [activeId, items]);
-
-  useEffect(() => {
-    // Khởi tạo accordion mặc định
-    if (activeId > 0) {
-      const contentEl = contentRefs.current[activeId];
-      if (contentEl) {
-        contentEl.style.maxHeight = contentEl.scrollHeight + "px";
-      }
-    }
-  }, []);
-
   return (
-    <ul className="accordion-box">
+    <ul className="accordion-box accordion-box-react">
       {items.map((item) => {
         const isActive = activeId === item.id;
         return (
@@ -68,7 +42,11 @@ export default function FaqAccordion({
             </span>
             <div
               className={`acc-btn ${isActive ? "active" : ""}`}
-              onClick={() => handleToggle(item.id)}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation(); // chặn script legacy
+                handleToggle(item.id);
+              }}
               style={{ cursor: "pointer" }}
             >
               <div className="icon-outer">
@@ -77,13 +55,7 @@ export default function FaqAccordion({
               {item.title}
             </div>
             <div
-              ref={(el) => (contentRefs.current[item.id] = el)}
-              className={`acc-content ${isActive ? "current" : ""}`}
-              style={{
-                maxHeight: "0px",
-                overflow: "hidden",
-                transition: "max-height 0.3s ease-in-out",
-              }}
+              className={`acc-content ${isActive ? "current open" : ""}`}
             >
               <div className="content">
                 <span dangerouslySetInnerHTML={{ __html: item.content }} />
@@ -92,6 +64,25 @@ export default function FaqAccordion({
           </li>
         );
       })}
+
+      {/* CSS riêng cho accordion React, tránh phụ thuộc height động */}
+      <style jsx>{`
+        /* Giữ layout câu hỏi ổn định khi mở/đóng (không đổi padding) */
+        .accordion-box-react .block,
+        .accordion-box-react .block.active-block {
+          padding-left: 0 !important;
+        }
+
+        .accordion-box-react .acc-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-box-react .acc-content.open {
+          max-height: 800px; /* đủ lớn cho nội dung FAQ, không cần đo scrollHeight */
+        }
+      `}</style>
     </ul>
   );
 }

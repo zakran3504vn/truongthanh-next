@@ -23,7 +23,7 @@ export default async function LocaleLayout({
 
       {children}
 
-      <SiteFooter />
+      <SiteFooter locale={safeLocale} />
 
       <div
         className="scroll-to-top scroll-to-target"
